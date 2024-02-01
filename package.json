@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "methodsstring": "node --watch ./methods/string.js",
+    "boolean": "node --watch ./methods/boolean.js",
+    "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
     "index": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
