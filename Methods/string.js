@@ -49,7 +49,7 @@ console.log(vardas2);
 const vardas3 = `Vardo "${name3}" ilgis yra ${name3.length} simboliai.`
 console.log(vardas3);
 
-const vardas4 = `Vardo "${name4}" ilgis yra ${name4.length} simboliai.`
+const vardas4 = `Vardo "${name4}" ilgis yra ${name4.length} simboliai.\n`
 console.log(vardas4);
 
 const pavarde1 = `Asmens ${name1} ${surname1} inicialai yra ${name1[0]} ${surname1[0]}.`
@@ -61,7 +61,7 @@ console.log(pavarde2);
 const pavarde3 = `Asmens ${name3} ${surname3} inicialai yra ${name3[0]}.${surname3[0]}.`
 console.log(pavarde3);
 
-const pavarde4 = `Asmens ${name4} ${surname4} inicialai yra ${name4[0]}.${surname4[0]}.`
+const pavarde4 = `Asmens ${name4} ${surname4} inicialai yra ${name4[0]}.${surname4[0]}.\n`
 console.log(pavarde4);
 
 
