@@ -4,8 +4,10 @@
   "main": "index.js",
   "scripts": {
     "function": "node --watch ./functions/function.js",
+    "number-sum": "node --watch ./exercises/number-sum.js",
     "methodsstring": "node --watch ./methods/string.js",
     "if": "node --watch ./compare/if.js",
+    "for": "node --watch ./loops/for.js",
     "ternary": "node --watch ./compare/ternary.js",
     "typeof": "node --watch ./compare/typeof.js",
     "boolean": "node --watch ./data-types/boolean.js",

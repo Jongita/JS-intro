@@ -1,4 +1,123 @@
+console.log('1.Skaičiaus tipo kintamieji:-----------------');
 
+const pomidoras = 'Pomidoras';
+const isNaujo = 'Bandykite kitą kartą.';
+
+const sauletuDienu = 15;
+const lyjaDienu = 15;
+
+
+console.log('a.kuris didesnis------------------------');
+
+if (sauletuDienu > lyjaDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const didesnis = sauletuDienu > lyjaDienu ? pomidoras : isNaujo;
+console.log(didesnis);
+
+console.log('b. kuris mažesnis------------------------');
+
+if (lyjaDienu < sauletuDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const mazesnis = lyjaDienu < sauletuDienu ? pomidoras : isNaujo;
+console.log(mazesnis);
+
+console.log('c. ar jie lygūs------------------');
+
+
+if (lyjaDienu === sauletuDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const lygus = sauletuDienu === lyjaDienu ? pomidoras : isNaujo;
+console.log(lygus);
+
+console.log('d. ar jie nelygūs------------------');
+
+if (lyjaDienu !== sauletuDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const neLygus = sauletuDienu !== lyjaDienu ? pomidoras : isNaujo;
+console.log(neLygus);
+
+console.log('e. didesnis arba lygus------------------');
+
+if (lyjaDienu >= sauletuDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const didesnisLygus = sauletuDienu >= lyjaDienu ? pomidoras : isNaujo;
+console.log(didesnisLygus);
+
+console.log('f. mažesnis arba lygus------------------');
+
+if (lyjaDienu <= sauletuDienu) {
+    console.log(pomidoras);
+} else {
+    console.log(isNaujo);
+}
+
+const mazesnisLygus = sauletuDienu <= lyjaDienu ? pomidoras : isNaujo;
+console.log(mazesnisLygus);
+
+console.log('2. Teksto tipo kintamųjų ilgiai------------------');
+
+
+const tekstasPomidoras = 'Pomidoras';
+const tekstasIsNaujo = 'Bandykite kitą kartą.';
+
+const ilgisPomidoras = tekstasPomidoras.length
+const ilgisIsnaujo = tekstasIsNaujo.length
+console.log(ilgisPomidoras);
+console.log(ilgisIsnaujo);
+
+console.log('3. a.kuris didesnis------------------');
+
+if (ilgisIsnaujo > ilgisPomidoras) {
+    console.log(tekstasPomidoras);
+} else {
+    console.log(tekstasIsNaujo);
+}
+
+const didesnis1 = ilgisIsnaujo > ilgisPomidoras ? tekstasPomidoras : tekstasIsNaujo;
+console.log(didesnis1);
+
+console.log('3. b.kuris mažesnis------------------');
+
+if (ilgisPomidoras > ilgisIsnaujo) {
+    console.log(tekstasPomidoras);
+} else {
+    console.log(tekstasIsNaujo);
+}
+
+const mazesnis1 = ilgisPomidoras > ilgisIsnaujo ? tekstasPomidoras : tekstasIsNaujo;
+console.log(mazesnis1);
+
+console.log('3. c.lygus------------------');
+
+if (ilgisPomidoras === ilgisIsnaujo) {
+    console.log(tekstasPomidoras);
+} else {
+    console.log(tekstasIsNaujo);
+}
+const lygus1 = ilgisPomidoras === ilgisIsnaujo ? tekstasPomidoras : tekstasIsNaujo;
+console.log(lygus1);
+
+console.log('3. d.didesnis arba lygus------------------');
 
 
 
@@ -69,7 +188,10 @@ function isrinktiRaides(string, number) {
 console.log(isrinktiRaides(letters, kasAntraRaide));
 
 
+console.clear();
 
-const asmensKodas = 37060123456;
-const akIlgis = asmensKodas.length;
-const akTekstas = string(asmensKodas);
+
+let number = 37060123456;
+let string1 = String(number);
+let string2 = string1.length;
+console.log(string2);

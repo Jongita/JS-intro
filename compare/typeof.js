@@ -1,6 +1,5 @@
 /*
-
-
+TYPEOF - duomens tipo nustatymo operatorius
 */
 
 

@@ -226,3 +226,35 @@ console.log(dienaNaktis);
 
 console.log(valanda % 12);
 
+let i = 0;
+console.log(i);
+
+i = i + 1;
+console.log(i);
+
+i++
+console.log(i);
+
+i++
+console.log(i);
+
+i--
+console.log(i);
+// didinimas vyksta po panudojimo, spausdinimo
+let p = 0;
+console.log(p);
+console.log(p++);
+console.log(p++);
+console.log(p++);
+console.log(p++);
+console.log(p++);
+
+console.log('---------------------');
+// didinimas vyksta pries spausdinima
+let r = 0;
+console.log(r);
+console.log(++r);
+console.log(++r);
+console.log(++r);
+console.log(++r);
+console.log(++r);

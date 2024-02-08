@@ -1,11 +1,16 @@
 /*
+FUNCTION - funkcija
+Perpanaudojamas logikos blokas
 
+function example(parametrai) {
+    // 1. parametru validavimas
+    // 2. logika
+    // 3. rezultato validavimas
+    // 4. rezultato grazinimas
+}
 
 
 */
-
-
-
 
 const a1 = 7;
 const a2 = 5;
