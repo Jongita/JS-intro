@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "function": "node --watch ./functions/function.js",
     "methodsstring": "node --watch ./methods/string.js",
     "if": "node --watch ./compare/if.js",
     "ternary": "node --watch ./compare/ternary.js",
+    "typeof": "node --watch ./compare/typeof.js",
     "boolean": "node --watch ./data-types/boolean.js",
     "array": "node --watch ./data-types/array.js",
     "object": "node --watch ./data-types/object.js",
     "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
+    "jjnd": "node --watch ./Namu-Darbai/jjnd.js",
     "index": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test2": "echo \"Error: no test2 specified\" && exit 2"
