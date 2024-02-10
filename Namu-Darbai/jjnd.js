@@ -40,15 +40,31 @@ function sumBetween1(min, max) {
     return result1;
 }
 
-console.log(sumBetween1(3, 7));
-console.log(sumBetween1(4, 9));
-console.log(sumBetween(574, 815));
-console.log(sumBetween(-50, 50));
-console.log(sumBetween(-70, 30));
+console.log(sumBetween1(574, 815));
+console.log(sumBetween1(-50, 50));
+console.log(sumBetween1(-70, 30));
 
 
 
+function sumBetween2(min, max) {
 
+    const markLenght = (max - min) + 1;
+
+    const totalSum = markLenght * max;
+
+    const total2 = markLenght - 1;
+
+    const total3 = (total2 * (total2 + 1)) / 2;
+
+    const result2 = totalSum - total3;
+
+
+    return result2;
+}
+
+console.log(sumBetween2(574, 815));
+console.log(sumBetween2(-50, 50));
+console.log(sumBetween2(-70, 30));
 
 
 
