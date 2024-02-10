@@ -21,7 +21,7 @@ OPERATORIAI:
 - matematiniai:
     - aritmetiniai: +, -, /, *, % (liekana), ** (kelimas laipsniu)
     - aritmetiniai priskyrimo (sutrumpinti) +=, -=, *=, /=, **=, %=
-
+    - aritmetiniai: ++, --
 */
 
 console.log(1 + 3);

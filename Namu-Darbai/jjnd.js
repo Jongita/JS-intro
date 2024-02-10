@@ -1,3 +1,63 @@
+console.log('Ciklo for panaudojimas:-----------------');
+
+function correctBetween(max) {
+    return (max * (max + 1)) / 2;
+}
+console.log(correctBetween(0));
+console.log(correctBetween(4));
+console.log(correctBetween(100));
+
+function sumBetween(min, max) {
+    let total = 0;
+
+    for (let i = min; i <= max; i++) {
+        total += i;
+    }
+    return total;
+}
+
+console.log(sumBetween(574, 815));
+console.log(sumBetween(-50, 50));
+console.log(sumBetween(-70, 30));
+
+
+
+
+
+function sumBetween1(min, max) {
+
+    const markLenght = (max - min) + 1;
+
+    const totalSum = markLenght * max;
+
+    let total1 = 0;
+    for (let i = 0; i < markLenght; i++) {
+        total1 += i;
+
+    }
+    const result1 = totalSum - total1;
+
+    return result1;
+}
+
+console.log(sumBetween1(3, 7));
+console.log(sumBetween1(4, 9));
+console.log(sumBetween(574, 815));
+console.log(sumBetween(-50, 50));
+console.log(sumBetween(-70, 30));
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log('1.Skaičiaus tipo kintamieji:-----------------');
 
 const pomidoras = 'Pomidoras';
@@ -41,7 +101,7 @@ if (lyjaDienu === sauletuDienu) {
 const lygus = sauletuDienu === lyjaDienu ? pomidoras : isNaujo;
 console.log(lygus);
 
-console.log('d. ar jie nelygūs------------------');
+console.log('d. ar jie nelygūs----------------------');
 
 if (lyjaDienu !== sauletuDienu) {
     console.log(pomidoras);
@@ -145,7 +205,7 @@ console.log(daugyba(skaicius1, skaicius2));
 console.log(daugyba(skaicius3, skaicius2));
 console.log(daugyba(skaicius1, skaicius3));
 
-console.log('skaitmenukelintaRaideSkaiciuje--------------------------------');
+console.log('skaitmenukelintaRaideSkaiciuje------------');
 
 
 function skaitmenuKiekisSkaiciuje(number) {
@@ -154,12 +214,8 @@ function skaitmenuKiekisSkaiciuje(number) {
     }
     if (isNaN(number)) {
         return 'Pateikta netinkamo tipo reikšmė.';
-    }
-    if (number > 1) {
-        return Math.floor(Math.log10(Math.abs(number))) + 1;
-    }
-    if (number === 0) {
-        return 1;
+    } else {
+        return String(number).length;
     }
 }
 
@@ -170,28 +226,31 @@ console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje('asd'));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
-console.log('isrinktiRaides--------------------------------');
+console.log('isrinktiRaides-------------------------');
 
-const letters = 'abcdefg';
-const kasAntraRaide = letters[1] + letters[3] + letters[5];
 
 function isrinktiRaides(string, number) {
     if (typeof string !== 'string') {
         return 'Pirmasis kintamasis yra netinkamo tipo.';
     }
-    if (string.length > 99) {
+    if (string.length > 99) {   // ar ne tuscias???
         return 'Pirmojo kintamojo reikšmė yra netinkamo dydžio.';
+    }
+    if (typeof number !== 'number') {
+        return 'Antrasis kintamasis yra netinkamo tipo.';
+    }
+    if (number <= 0) {
+        return 'Antrasis kintamasis turi būti didesnis už nulį.';
+    }
+    if (number > string.length) {
+        return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.';
     } else {
-        return string
+        return string[1] + string[3] + string[5];
     }
 }
-console.log(isrinktiRaides(letters, kasAntraRaide));
+console.log(isrinktiRaides('abcdefg', 2));
+console.log(isrinktiRaides('abcdefghijkl', 3));
+console.log(isrinktiRaides('abc', 0));
+console.log(isrinktiRaides('abc', 4));
+console.log(isrinktiRaides(1561, 2));
 
-
-console.clear();
-
-
-let number = 37060123456;
-let string1 = String(number);
-let string2 = string1.length;
-console.log(string2);

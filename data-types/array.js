@@ -112,6 +112,8 @@ console.log('Pazymiu kiekis', marks.length);
 
 console.log(marks[0]);
 
+// Reikia suskaiciuoti pazymiu vidurki
+
 function marksAverage(marks) {
     // validacijos
 

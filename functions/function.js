@@ -29,7 +29,6 @@ console.log(c3);
 
 // Funkcija pavadinimu “tusciaFunkcija”:
 function empty() {
-
 }
 
 const x1 = empty();
@@ -179,7 +178,6 @@ console.log(betterPrice(undefined), '->', 'Error');
 console.log(betterPrice(), '->', 'Error');
 console.log(betterPrice(betterPrice), '->', 'Error');
 console.log(betterPrice(-200), '->', 'Error');
-
 console.log(betterPrice(Infinity), '->', 'Error');
 console.log(betterPrice(-Infinity), '->', 'Error');
 console.log(betterPrice(NaN), '->', 'Error');
