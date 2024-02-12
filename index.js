@@ -19,7 +19,7 @@ Busimos temos:
 - ciklai (for)
     - for
     - while
-    - do-while
+    - do-while - nerasime kur panaudoti
     - for-of
     - for-in
     - kiti cikliski metodai
@@ -36,3 +36,5 @@ console.log(123123);
 console.log('1+1');
 
 
+// while darys jeigu tenkina salyga, lygiai taip pat kaip ir for
+// do-while, jis pirma padaro, o paskui paklausia ar pakartoti

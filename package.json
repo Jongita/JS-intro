@@ -10,6 +10,7 @@
     "if": "node --watch ./compare/if.js",
     "for": "node --watch ./loops/for.js",
     "for-of": "node --watch ./loops/for-of.js",
+    "for-in": "node --watch ./loops/for-in.js",
     "while": "node --watch ./loops/while.js",
     "ternary": "node --watch ./compare/ternary.js",
     "typeof": "node --watch ./compare/typeof.js",
