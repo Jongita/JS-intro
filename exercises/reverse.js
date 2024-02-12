@@ -26,21 +26,17 @@ function reverse(text) {
 
 console.log(reverse('abc'), '---', 'cba');
 
-// console.log(reverse(2154));
-// console.log(reverse(true));
-// console.log(reverse(reverse));
-// console.log(reverse());
-// console.log(reverse(undefined));
-// console.log(reverse([]));
-// console.log(reverse(['asd']));
-// console.log(reverse([2545]));
+// console.log(reverse(2154)); --> typeof text !== 'string'
+// console.log(reverse(true)); -->typeof text !== 'string'
+// console.log(reverse(reverse)); -->typeof text !== 'string'
+// console.log(reverse()); -->typeof text !== 'string'
+// console.log(reverse(undefined)); -->typeof text !== 'string'
+// console.log(reverse([])); -->typeof text !== 'string'
+// console.log(reverse(['asd'])); -->typeof text !== 'string'
+// console.log(reverse([2545])); -->typeof text !== 'string'
+// console.log(reverse(''), '->', ''); --> text === ' '
+// console.log(reverse('x'), '->', 'x'); --> text.length <= 1
 
-
-
-// console.log(reverse(''), '->', '');
-// console.log(reverse('x'), '->', 'x');
-
-console.log(reverse('abc'), '->', 'cba');
 
 console.log(reverse('labas'), '->', 'sabal');
 console.log(reverse('kedes'), '->', 'sedek');

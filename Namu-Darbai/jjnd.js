@@ -1,85 +1,69 @@
-console.log('Ciklo for panaudojimas:-----------------');
+console.log('KINTAMUJU INICIJAVIMAS:-----------------');
 
-function correctBetween(max) {
-    return (max * (max + 1)) / 2;
-}
-console.log(correctBetween(0));
-console.log(correctBetween(4));
-console.log(correctBetween(100));
+const a = 5;
+console.log(a);
+const b = 10;
+console.log(b);
+const c = 15;
+console.log(c);
 
-function sumBetween(min, max) {
-    let total = 0;
+console.log('-------------------------');
 
-    for (let i = min; i <= max; i++) {
-        total += i;
-    }
-    return total;
-}
+const d = 'Labas';
+console.log(d);
+const e = 'rytas';
+console.log(e);
+const f = 'Lietuva';
+console.log(f);
 
-console.log(sumBetween(574, 815));
-console.log(sumBetween(-50, 50));
-console.log(sumBetween(-70, 30));
+console.log('-------------------------');
 
+const g = [7, 9, 11, 13, 15];
+console.log(g);
+const h = [5, 10, 15, 20, 25];
+console.log(h);
+const j = [2, 6, 4, 8, 10];
+console.log(j);
 
+console.log('-------------------------');
 
+const mokiniai = ['Jonas', 'Petras', 'Maryte', 'Antanas', 'Ona'];
+console.log(mokiniai);
+const miestai = ['Vilnius', 'Kaunas', 'Klaipeda', 'Palanga', 'Kretinga'];
+console.log(miestai);
+const menesiai = ['Sausis', 'Kovas', 'Balandis', 'Birzelis', 'Rugsejis'];
+console.log(menesiai);
 
+console.log('-------------------------');
 
-function sumBetween1(min, max) {
+console.log('VEIKSMAI SU KINTAMAISIAIS:-----------------');
 
-    const markLenght = (max - min) + 1;
+const sum = a + b + c;
+console.log(a, '+', b, '+', c, '-->', 'SUMA', sum);
 
-    const totalSum = markLenght * max;
+console.log('-------------------------');
 
-    let total1 = 0;
-    for (let i = 0; i < markLenght; i++) {
-        total1 += i;
+const sujungtasTekstas = `${d} ${e}, ${f}!`;
+console.log(sujungtasTekstas);
 
-    }
-    const result1 = totalSum - total1;
+console.log('-------------------------');
 
-    return result1;
-}
+const skaiciuVerte = g[0] - g[1] + g[2] - g[3] + g[4];
+console.log('logika: 1-2+3-4+5', '-->', 'SUM:', skaiciuVerte);
 
-console.log(sumBetween1(574, 815));
-console.log(sumBetween1(-50, 50));
-console.log(sumBetween1(-70, 30));
+console.log('-------------------------');
 
-
-
-function sumBetween2(min, max) {
-
-    const markLenght = (max - min) + 1;
-
-    const totalSum = markLenght * max;
-
-    const total2 = markLenght - 1;
-
-    const total3 = (total2 * (total2 + 1)) / 2;
-
-    const result2 = totalSum - total3;
+const miestaiAtvirksciai = `${miestai[4]}, ${miestai[3]}, ${miestai[2]}, ${miestai[1]}, ${miestai[0]}.`;
+console.log(miestaiAtvirksciai);
 
 
-    return result2;
-}
-
-console.log(sumBetween2(574, 815));
-console.log(sumBetween2(-50, 50));
-console.log(sumBetween2(-70, 30));
-
-
-
-
-
-
-
-
-
+console.log('KINTAMUJU PALYGINIMAS-----------------');
 console.log('1.Skaičiaus tipo kintamieji:-----------------');
 
 const pomidoras = 'Pomidoras';
 const isNaujo = 'Bandykite kitą kartą.';
 
-const sauletuDienu = 15;
+const sauletuDienu = 17;
 const lyjaDienu = 15;
 
 
@@ -198,6 +182,147 @@ console.log('3. d.didesnis arba lygus------------------');
 
 
 
+
+
+
+
+
+
+
+
+
+
+console.log('CIKLO FOR PANAUDOJIMAS:-----------------');
+
+function correctBetween(max) {
+    return (max * (max + 1)) / 2;
+}
+console.log(correctBetween(0));
+console.log(correctBetween(4));
+console.log(correctBetween(100));
+
+function sumBetween(min, max) {
+    let total = 0;
+
+    for (let i = min; i <= max; i++) {
+        total += i;
+    }
+    return total;
+}
+
+console.log(sumBetween(574, 815));
+console.log(sumBetween(-50, 50));
+console.log(sumBetween(-70, 30));
+
+console.log('-------------------------');
+
+
+function sumBetween1(min, max) {
+
+    const markLenght = (max - min) + 1;
+
+    const totalSum = markLenght * max;
+
+    let total1 = 0;
+    for (let i = 0; i < markLenght; i++) {
+        total1 += i;
+
+    }
+    const result1 = totalSum - total1;
+
+    return result1;
+}
+
+console.log(sumBetween1(574, 815));
+console.log(sumBetween1(-50, 50));
+console.log(sumBetween1(-70, 30));
+
+console.log('-------------------------');
+
+function sumBetween2(min, max) {
+
+    const markLenght = (max - min) + 1;
+
+    const totalSum = markLenght * max;
+
+    const total2 = markLenght - 1;
+
+    const total3 = (total2 * (total2 + 1)) / 2;
+
+    const result2 = totalSum - total3;
+
+    return result2;
+}
+
+console.log(sumBetween2(574, 815));
+console.log(sumBetween2(-50, 50));
+console.log(sumBetween2(-70, 30));
+
+console.log('-------------------------');
+
+function reverse(text) {
+    if (typeof text !== 'string') {
+        return 'ERROR: duok teksta';
+    }
+    if (text === ' ') {
+        return ' ';
+    }
+    if (text.length <= 1) {
+        return text;
+    }
+
+    let result = '';
+
+    for (let i = text.length - 1; i >= 0; i--) {
+        result += text[i];
+    }
+
+    return result;
+
+}
+
+console.log(reverse('abcdef'), '---', 'fedcba');
+
+// console.log(reverse(2154));
+// console.log(reverse(true));
+// console.log(reverse(reverse));
+// console.log(reverse());
+// console.log(reverse(undefined));
+// console.log(reverse([]));
+// console.log(reverse(['asd']));
+// console.log(reverse([2545]));
+
+console.log('-------------------------');
+
+
+
+
+function liekana(min, max) {
+    let result = '';
+
+    for (let i = text.length - 1; i >= 0; i--) {
+        result += text[i];
+    }
+
+    return result;
+
+}
+
+
+
+
+
+
+
+
+
+console.log(liekana(0, 11));
+
+
+
+
+
+
 console.log('FUNKCIJOS-------------------------------------');
 console.log('Tuscia funkcija-------------------------------------');
 
@@ -242,6 +367,33 @@ console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje('asd'));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
+console.log('didziausiasSkaiciussarase-------------------------');
+
+
+function didziausiasSkaiciusSarase(value) {
+    if (value === '') {
+        return 'Pateiktas sąrašas negali būti tuščias.';
+    }
+    if (typeof value !== 'object') {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+
+
+    return value.max
+}
+
+
+console.log(didziausiasSkaiciusSarase([1]));
+console.log(didziausiasSkaiciusSarase([1, 2, 3]));
+console.log(didziausiasSkaiciusSarase([-5, 78, 14, 0, 18]));
+console.log(didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));
+console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8]));
+console.log(didziausiasSkaiciusSarase('pomidoras'));
+console.log(didziausiasSkaiciusSarase([]));
+console.log(didziausiasSkaiciusSarase());
+
+
+
 console.log('isrinktiRaides-------------------------');
 
 
@@ -260,13 +412,50 @@ function isrinktiRaides(string, number) {
     }
     if (number > string.length) {
         return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.';
-    } else {
-        return string[1] + string[3] + string[5];
     }
+    let result = ' ';
+
+    for (let i = number - 1; i < string.length; i += number) {
+        result += string[i];
+    }
+
+    return result;
 }
+
 console.log(isrinktiRaides('abcdefg', 2));
 console.log(isrinktiRaides('abcdefghijkl', 3));
 console.log(isrinktiRaides('abc', 0));
 console.log(isrinktiRaides('abc', 4));
 console.log(isrinktiRaides(1561, 2));
+
+console.log('-------------------------');
+
+const tekstas = 'abcdefgh';
+
+let result = ' ';
+
+for (let i = 0; i <= tekstas.length; i++) {
+    result += tekstas[i];
+    console.log(tekstas[i]);
+}
+
+for (let i = tekstas.length - 1; i >= 0; i--) {
+    result += tekstas[i];
+    console.log(result);
+}
+
+function liekana(min, max) {
+    let total = 0;
+    let k = 3;
+
+
+    for (let i = min; i <= max; i++) {
+        total += i;
+        console.log(i);
+    }
+    return total;
+
+}
+
+console.log(liekana(0, 11)); // is 3 --> 0 3 6 9
 

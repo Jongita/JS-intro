@@ -30,3 +30,11 @@ const g = typeof typeof 5;
 // const g = typeof ('number'); (number grazina kaip stringa)
 // const g = 'string';
 console.log(g);
+
+console.log('--------------');
+
+const h = typeof [5, 7, 8];
+console.log(h);
+
+const i = typeof ['labas', 'rytas'];
+console.log(i);
