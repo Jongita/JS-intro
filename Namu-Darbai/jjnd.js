@@ -449,7 +449,7 @@ function liekana(min, max) {
     let k = 3;
 
 
-    for (let i = min; i <= max; i++) {
+    for (let i = min; i <= max; i += 3) {
         total += i;
         console.log(i);
     }
