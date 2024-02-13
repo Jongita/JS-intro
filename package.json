@@ -20,6 +20,7 @@
     "string": "node --watch ./data-types/string.js",
     "number": "node --watch ./data-types/number.js",
     "jjnd": "node --watch ./Namu-Darbai/jjnd.js",
+    "codewars": "node --watch ./Namu-Darbai/codewars.js",
     "index": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test2": "echo \"Error: no test2 specified\" && exit 2"
