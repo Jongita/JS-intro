@@ -102,28 +102,32 @@ console.log(arithmetic(8, 2, "divide"), 4, "'divide' should return a divided by 
 
 console.log('--------------------------------');
 
+function positiveSum(arr) {
+    let result = 0;
+    for (const number of arr) {
+        if (number > 0) {
+            result += number;
+        };
+
+    }
+    return result;
+}
+
+console.log(positiveSum([1, 2, 3, 4, 5]), 15);
+console.log(positiveSum([1, -2, 3, 4, 5]), 13);
+console.log(positiveSum([]), 0);
+console.log(positiveSum([-1, -2, -3, -4, -5]), 0);
+console.log(positiveSum([-1, 2, 3, 4, -5]), 9);
+
 // function positiveSum(arr) {
-//     for (let i = 0; i < arr.length; i++) {
-//         console.log(arr[i]);
+//     var total = 0;
+//     for (i = 0; i < arr.length; i++) {    // setup loop to go through array of given length
+//         if (arr[i] > 0) {                   // if arr[i] is greater than zero
+//             total += arr[i];                  // add arr[i] to total
+//         }
 //     }
-//     if (arr[i] < 0) {
-//         return false;
-//     }
-//     return 0;
+//     return total;                         // return total
 // }
-
-
-
-// console.log(positiveSum([1, 2, 3, 4, 5]), '---', 15);
-// console.log(positiveSum([1, -2, 3, 4, 5]), '---', 13);
-// // console.log(positiveSum([]), 0);
-// // console.log(positiveSum([-1, -2, -3, -4, -5]), 0);
-// // console.log(positiveSum([-1, 2, 3, 4, -5]), 9);
-
-// // let result = 0;
-// // for (let i = 1; i <= n; i++) {
-// //     let d = i * i;
-// //     return d === n ? true : false;
 
 function whatday(num) {
     if (num === 1) {
@@ -330,3 +334,116 @@ console.log(peopleWithAgeDrink(22), 'drink whisky');
 //     age < 14 ? "drink toddy" :
 //         age < 18 ? "drink coke" :
 //             age < 21 ? "drink beer" : "drink whisky"
+
+//  susumuoti visus masyve esancius teigiamus skaicius
+
+// Rimanto mokymas:
+const a1 = [10, 2, 8, 4, 6];
+const a2 = [-10, 2, 8, 4, 6];
+const a3 = [-10, -2, -8, -4, -6];
+
+function removeNegative(list) {
+    let result = 0;
+    for (const number of list) {
+        if (number > 0) {
+            result += number;
+        };
+
+    }
+    return result;
+}
+
+console.log(removeNegative(a1));
+console.log(removeNegative(a2));
+console.log(removeNegative(a3));
+
+console.log('----------------------------');
+
+function abbrevName(name) {
+    const myArray = name.split(" ");
+    let word = myArray[1];
+    let inicial1 = myArray[0];
+    let inicial2 = myArray[1];
+    const bigLetter1 = inicial1.toUpperCase();
+    const lowLetter2 = inicial2.toUpperCase();
+    const inicial3 = `${bigLetter1[0]}.${lowLetter2[0]}`
+    return inicial3
+}
+console.log(abbrevName("Sam Harris"), "S.H");
+console.log(abbrevName("Patrick Feenan"), "P.F");
+console.log(abbrevName("Evan Cole"), "E.C");
+console.log(abbrevName("P Favuzzi"), "P.F");
+console.log(abbrevName("David Mendieta"), "D.M");
+
+// function abbrevName(name) {
+
+//     var nameArray = name.split(" ");
+//     return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+// }
+
+function problem(x) {
+    if (typeof x !== 'number') {
+        return 'Error';
+    }
+    const value = x * 50 + 6;
+    return value;
+}
+
+
+console.log(problem("hello"), "Error");
+console.log(problem(1), 56);
+console.log(problem(5), 256);
+console.log(problem(0), 6);
+console.log(problem(1.2), 66);
+console.log(problem(3), 156);
+console.log(problem("RyanIsCool"), "Error");
+console.log(problem(-3), -144);
+console.log(problem(""), "Error");
+console.log(problem(0.03), 7.5);
+
+// const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+
+function doubleInteger(i) {
+    i *= 2;
+    return i;
+}
+
+console.log(doubleInteger(2), 4);
+console.log(doubleInteger(8), 16);
+
+// return i * 2;
+
+function updateLight(current) {
+    if (current === 'green') {
+        return 'yellow';
+    }
+    if (current === 'yellow') {
+        return 'red';
+    }
+    if (current === 'red') {
+        return 'green';
+    }
+}
+
+console.log(updateLight("green"), "yellow");
+console.log(updateLight("yellow"), "red");
+console.log(updateLight("red"), "green");
+
+// return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+// Pythagorean Triple
+
+function isPythagoreanTriple(integers) {
+    const a = integers[0];
+    const b = integers[1];
+    const c = integers[2];
+
+    const d = (a * a) + (b * b);
+    const e = c * c;
+    console.log(d, e);
+    return (a ** 2) + (b ** 2) === c ** 2 ? true : false;
+}
+
+console.log(isPythagoreanTriple([3, 4, 5]), true);
+console.log(isPythagoreanTriple([3, 5, 9]), false);
+console.log(isPythagoreanTriple([2232, 2418, 930]), true);
+

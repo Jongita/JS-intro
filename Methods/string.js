@@ -70,3 +70,5 @@ console.log(name12);
 const surname12 = `Asmens ${name1 + ' ' + surname1} inicialai yra ${name1[0] + '.' + surname1[0]}.`
 console.log(pavarde1);
 
+
+console.clear();
