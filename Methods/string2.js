@@ -37,7 +37,7 @@ console.log(String.fromCharCode(168));
 console.log(String.fromCharCode(169));
 console.log(String.fromCharCode(170));
 
-console.clear();
+console.log('-----------');
 
 console.log(text.endsWith('a'));
 console.log(text.endsWith('s'));
@@ -48,7 +48,7 @@ console.log(text.startsWith('P'));
 console.log(text.startsWith('Pom'));
 console.log(text.startsWith('Pomas'));
 
-console.clear();
+console.log('-----------');
 
 console.log('Pomidoras'.includes('o'));
 console.log('Pomidoras'.includes('omi'));
@@ -58,33 +58,35 @@ console.log('Pomidoras'.includes('POmi'));
 console.log('Pomidoras'.includes('Pomi'));
 console.log('Pomidoras'.includes('ras'));
 
-console.clear();
+console.log('-----------');
 
-console.log('Pomidoras'.indexOf('x'));
-console.log('Pomidoras'.indexOf('5'));
-console.log('Pomidoras'.indexOf('defretr'));
-console.log('Pomidoras'.indexOf('P'));
-console.log('Pomidoras'.indexOf('o'));
-console.log('Pomidoras'.indexOf('m'));
-console.log('Pomidoras'.indexOf('i'));
-console.log('Pomidoras'.indexOf('d'));
-console.log('Pomidoras'.indexOf('d', 0));
-console.log('Pomidoras'.indexOf('d', 1));
-console.log('Pomidoras'.indexOf('d', 2));
-console.log('Pomidoras'.indexOf('d', 3));
-console.log('Pomidoras'.indexOf('d', 4));
-console.log('Pomidoras'.indexOf('d', 5));
-console.log('Pomidoras'.indexOf('d', 6));
-console.log('Pomidoras'.indexOf('d', 7));
-console.log('----------');
-console.log('Pomidoras'.indexOf('o'));
-console.log('Pomidoras'.indexOf('o', 0));
-console.log('Pomidoras'.indexOf('o', 1));
-console.log('Pomidoras'.indexOf('o', 2));
-console.log('Pomidoras'.indexOf('o', 5));
-console.log('Pomidoras'.indexOf('o', 6));
+console.log('Pomidoras'.indexOf('x'));              // -1
+console.log('Pomidoras'.indexOf('5'));              // -1
+console.log('Pomidoras'.indexOf('defretr'));        // -1
+console.log('Pomidoras'.indexOf('P'));              // 0
+console.log('Pomidoras'.indexOf('o'));              // 1
+console.log('Pomidoras'.indexOf('m'));              // 2
+console.log('Pomidoras'.indexOf('i'));              // 3
+console.log('Pomidoras'.indexOf('d'));              // 4
+console.log('Pomidoras'.indexOf('d', 0));           // 4
+console.log('Pomidoras'.indexOf('d', 1));           // 4
+console.log('Pomidoras'.indexOf('d', 2));          // 4
+console.log('Pomidoras'.indexOf('d', 3));          // 4
+console.log('Pomidoras'.indexOf('d', 4));          // 4
+console.log('Pomidoras'.indexOf('d', 5));          // -1
+console.log('Pomidoras'.indexOf('d', 6));          // -1
+console.log('Pomidoras'.indexOf('d', 7));           // -1
 
-console.clear();
+console.log('-------------------nuo kurios pozicijos ieskoti');
+
+console.log('Pomidoras'.indexOf('o'));              // 1
+console.log('Pomidoras'.indexOf('o', 0));          // 1
+console.log('Pomidoras'.indexOf('o', 1));          // 1
+console.log('Pomidoras'.indexOf('o', 2));           // 5
+console.log('Pomidoras'.indexOf('o', 5));           // 5
+console.log('Pomidoras'.indexOf('o', 6));           // -1
+
+console.log('-----------');
 
 // pakartok teksta "labas" 3 kartus -> labaslabaslabas
 
@@ -112,7 +114,7 @@ console.log('???'.repeat(3));
 console.log('labas'.repeat(4));
 console.log('labas'.repeat(5));
 
-console.clear();
+console.log('-----------');
 
 const vasara = 'vasara'
     .replace('a', '-')
@@ -123,7 +125,7 @@ console.log(vasara);
 const vasara2 = 'vasaravasaravasara'.replaceAll('a', '-');
 console.log(vasara2);
 
-console.clear();
+console.log('-----------');
 
 console.log('Pomidoras'.slice());
 console.log('Pomidoras'.slice(0));
@@ -147,7 +149,7 @@ console.log('Pomidoras'.slice(-4));
 console.log('Pomidoras'.slice(-4, -2));
 console.log('Pomidoras'.slice(2, -2));
 
-console.clear();
+console.log('-----------');
 
 console.log('Pomidoras'.split());
 console.log('Pomidoras'.split('m'));
@@ -165,13 +167,13 @@ console.log(''.split('a'));
 console.log(''.split(''));
 console.log('vasara'.split(''));
 
-console.clear();
+console.log('-----------');
 
 console.log('vasara'.toUpperCase());
 console.log('VASara'.toUpperCase());
 console.log('VASara'.toLowerCase());
 
-console.clear();
+
 
 console.log(`"${'vasara'.trim()}"`);
 console.log(`"${'v a s a r a'.trim()}"`);

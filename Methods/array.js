@@ -77,7 +77,7 @@ console.log(petras);
 console.log(petras.shift());
 console.log(petras);
 
-console.clear();
+
 
 console.log([10, 2, 8, 4, 6].at(0));
 console.log([10, 2, 8, 4, 6].at(1));
@@ -91,7 +91,7 @@ console.log([10, 2, 8, 4, 6].at(-3));
 console.log([10, 2, 8, 4, 6].at(-4));
 console.log([10, 2, 8, 4, 6].at(-5));
 
-console.clear();
+
 
 const vienas = [1, 1, 1];
 const du = [2, 2, 2];
@@ -112,7 +112,7 @@ console.log(trysVienasDu);
 const trysVienasDuXXX = trys.concat(5, vienas, 7, du, 9);
 console.log(trysVienasDuXXX);
 
-console.clear();
+
 
 console.log([10, 2, 8, 4, 6].includes(5));
 console.log([10, 2, 8, 4, 6].includes(8));
@@ -124,7 +124,7 @@ console.log([10, 2, 8, 4, 6].indexOf(8));
 console.log([10, 2, 8, 4, 6].indexOf(10));
 console.log([10, 2, 8, 4, 6].indexOf(2));
 
-console.clear();
+
 
 const john = ['j', 'jay', 'jail', 'join', 'joint'];
 console.log(john);
@@ -134,7 +134,7 @@ console.log(john.join(', '));
 console.log(john.join('-'));
 console.log(john.join('-=-'));
 
-console.clear();
+
 
 const abc = ['a', 'b', 'c', 'd'];
 console.log(abc);
@@ -145,7 +145,6 @@ console.log(abc);
 abc.reverse();
 console.log(abc);
 
-console.clear();
 
 const ona = ['suo', 'kate', 'papuga', 'ziurkenas', 'sinsila'];
 
@@ -174,3 +173,55 @@ Grazinti trumpini (inicialai).
 
 pvz.: Chuck Norris -> C.N.
 */
+console.log('-----------------------------------------');
+
+function strayName(name) {
+    let sumName = '';
+    for (let i = 1; i < name.length; i++) {
+        sumName += name[i];
+    }
+    return name[0].toUpperCase() + sumName.toLowerCase();
+};
+
+console.log(strayName("jonas"), "Jonas");
+console.log(strayName("oNA"), "Ona");
+console.log(strayName("PeTrAs"), "Petras");
+console.log(strayName("Maryte"), "Maryte");
+
+console.log('-----------------------------------------');
+
+function abbrevName(name) {
+    const myArray = name.split(" ");
+    let word = myArray[1];
+    let inicial1 = myArray[0];
+    let inicial2 = myArray[1];
+    const bigLetter1 = inicial1.toUpperCase();
+    const lowLetter2 = inicial2.toUpperCase();
+    const inicial3 = `${bigLetter1[0]}.${lowLetter2[0]}.`
+    return inicial3
+}
+console.log(abbrevName("Chuck Norris"), "C.N.");
+console.log(abbrevName("chuck norris"), "C.N.");
+
+
+function abbrevName(name) {
+    let splitName = name.split(" ");
+    return (splitName[0][0] + "." + splitName[1][0] + ".").toUpperCase();
+}
+console.log(abbrevName("Chuck Norris"), "C.N.");
+console.log(abbrevName("chuck norris"), "C.N.");
+
+function formatName(text) {
+    // Kaip apibudinti kas yra tvarkingai suformatuotas vardas?
+    // - Pirma didzioji
+    // - Kitos mazosios
+
+    const firstLetter = text[0].toUpperCase();
+    const otherLetters = text.slice(1).toLowerCase();
+
+    return firstLetter + otherLetters;
+}
+console.log(formatName('jonas'), '->', 'Jonas');
+console.log(formatName('oNA'), '->', 'Ona');
+console.log(formatName('PeTrAs'), '->', 'Petras');
+console.log(formatName('Maryte'), '->', 'Maryte');

@@ -437,13 +437,383 @@ function isPythagoreanTriple(integers) {
     const b = integers[1];
     const c = integers[2];
 
-    const d = (a * a) + (b * b);
-    const e = c * c;
-    console.log(d, e);
     return (a ** 2) + (b ** 2) === c ** 2 ? true : false;
 }
 
 console.log(isPythagoreanTriple([3, 4, 5]), true);
 console.log(isPythagoreanTriple([3, 5, 9]), false);
 console.log(isPythagoreanTriple([2232, 2418, 930]), true);
+
+console.log('----Reverse---------------');
+
+function solution(str) {
+    let result = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        result += str[i];
+    }
+    return result;
+}
+
+console.log(solution('world'), 'dlrow');
+console.log(solution('hello'), 'olleh');
+console.log(solution(''), '');
+console.log(solution('h'), 'h');
+
+// function solution(str) {
+//     return str.split('').reverse().join('');
+// }
+
+function between(a, b) {
+    let total = 0;
+    let i = 0;
+    for (let i = a; i <= b; i++) {
+        const arrayOfDigits = Array.from(i);
+        console.log(arrayOfDigits);
+    }
+    return total;
+
+
+}
+
+console.log('----Num to string---------------');
+
+console.log(between(1, 4), [1, 2, 3, 4]);
+console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
+
+function numberToString(num) {
+    let string1 = String(num);
+    return string1;
+}
+
+console.log(numberToString(67), '67');
+
+// return num.toString();
+
+console.log('----index of---------------');
+
+function check(a, x) {
+    return a.indexOf(x) !== -1 ? true : false
+}
+
+console.log(check([66, 101], 66), true);
+console.log(check([101, 45, 75, 105, 99, 107], 107), true);
+console.log(check(['t', 'e', 's', 't'], 'e'), true);
+console.log(check(['what', 'a', 'great', 'kata'], 'kat'), false);
+
+// const check = (a, x) => a.includes(x);
+
+console.log('-------------------');
+
+function arrayMadness(a, b) {
+    let aSum = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        let c = a[i] ** 2;
+        aSum += c;
+    }
+    let bSum = 0;
+    for (let i = 0; i < b.length; i++) {
+        let d = b[i] ** 3;
+        bSum += d;
+    }
+    if (aSum > bSum) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// function arrayMadness(a, b) {
+//     let sum1 = 0;
+//     let sum2 = 0;
+//     for (let i = 0, { length } = a; i < length; ++i) {
+//         sum1 += a[i] ** 2;
+//     }
+//     for (let i = 0, { length } = b; i < length; ++i) {
+//         sum2 += b[i] ** 3;
+//     }
+//     return sum1 > sum2;
+
+console.log(arrayMadness([4, 5, 6], [1, 2, 3]), true);
+console.log(arrayMadness([5, 6, 7], [4, 5, 6]), false);
+console.log(arrayMadness([4, 5, 6], [3, 4, 5]), false);
+console.log(arrayMadness([3, 4, 5], [2, 3, 4]), false);
+console.log(arrayMadness([2, 3, 4], [1, 2, 3]), false);
+console.log(arrayMadness([1, 2, 3], [0, 1, 2]), true);
+console.log(arrayMadness([5, 3, 2, 4, 1], [15]), false);
+console.log(arrayMadness([2, 5, 3, 4, 1], [3, 3, 3, 3, 3]), false);
+console.log(arrayMadness([1, 3, 5, 2, 4], [2, 2, 2, 2, 2, 2, 2, 1]), false);
+console.log(arrayMadness([1, 2, 3, 4, 5], [2, 2, 2, 2, 2, 2, 1, 1, 1]), true);
+console.log(arrayMadness([2, 4, 6, 8, 10, 12, 14], [1, 3, 5, 7, 9, 11, 13]), false);
+
+
+console.log('-------------------');
+
+// function strCount(str, letter) {
+//     if ((str - letter) == 0)
+//         return true;
+// }
+
+
+// console.log(strCount('Hello', 'o'), 1);
+// console.log(strCount('Hello', 'l'), 2);
+// console.log(strCount('', 'z'), 0);
+
+// let sumStr = '';
+// for (let i = 0; i < str.length; i++)
+//     if (str[i] === letter) {
+//         return 1;
+//     }
+// //     sumStr += str[i];
+// // if (str.indexOf(letter) !== -1) {
+// //     return 1;
+
+// for (let i = 0; i <= str.length; i++) {
+//     for (let j = i + 1; j <= str.length; j++) {
+//         if (str[j] === str[i]) {
+//             return 2;
+//         }
+//     }
+// }
+// return 1
+
+console.log(tripleTrouble("aaa", "bbb", "ccc"), "abcabcabc");
+// console.log(tripleTrouble("aaaaaa", "bbbbbb", "cccccc"), "abcabcabcabcabcabc");
+// console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
+// console.log(tripleTrouble("Sea", "urn", "pms"), "Supermans");
+// console.log(tripleTrouble("LLh", "euo", "xtr"), "LexLuthor");
+
+// Pythagorean Triple
+
+function isPythagoreanTriple(integers) {
+    const a = integers[0];
+    const b = integers[1];
+    const c = integers[2];
+
+    if (a ** 2 + b ** 2 === c ** 2) {
+        return true;
+    }
+    if (a ** 2 + c ** 2 === b ** 2) {
+        return true;
+    }
+    if (b ** 2 + c ** 2 === a ** 2) {
+        return true;
+    }
+    return false;
+}
+
+console.log('-------------------');
+
+console.log(isPythagoreanTriple([3, 4, 5]), true);
+console.log(isPythagoreanTriple([3, 5, 9]), false);
+console.log(isPythagoreanTriple([2232, 2418, 930]), true);
+
+function tripleTrouble(one, two, three) {
+    const sumThree = one + two + three;
+    console.log(sumThree);
+
+    let oneSum = '';
+    for (let i = 0; i < one.length; i++) {
+        oneSum += one[i];
+        console.log(oneSum);
+    }
+    let twoSum = '';
+    for (let j = 0; j < one.length; j++) {
+        twoSum += two[j];
+        console.log(twoSum);
+    }
+}
+console.log('-------------------');
+
+const areaOrPerimeter = (l, w) => l === w ? l * w : l * 2 + w * 2;
+
+console.log(areaOrPerimeter(3, 3), 9);
+console.log(areaOrPerimeter(6, 10), 32);
+
+// const areaOrPerimeter = function (l, w) {
+//     return l == w ? l * w : 2 * (l + w)
+// };
+
+console.log('-------------------');
+
+function removeChar(str) {
+    let result = str.slice(1, -1);
+    return result;
+};
+
+console.log(removeChar('eloquent'), 'loquen');
+console.log(removeChar('country'), 'ountr');
+console.log(removeChar('person'), 'erso');
+console.log(removeChar('place'), 'lac');
+console.log(removeChar('ooopsss'), 'oopss');
+
+console.log('-------------------');
+
+const stringToNumber = (str) => Number(str);
+
+console.log(stringToNumber("1234"), 1234)
+console.log(stringToNumber("605"), 605)
+console.log(stringToNumber("1405"), 1405)
+console.log(stringToNumber("-7"), -7)
+
+// var stringToNumber = function (str) {
+//     return parseInt(str);
+// }
+
+function enough(cap, on, wait) {
+    if (on + wait < cap) {
+        return 0;
+    } else {
+        return on + wait - cap;
+    }
+}
+console.log(enough(10, 5, 5), 0);
+console.log(enough(100, 60, 50), 10);
+console.log(enough(20, 5, 5), 0);
+
+// function enough(cap, on, wait) {
+//     return Math.max(wait + on - cap, 0);
+// }
+console.log('-------------------');
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump ? true : false;
+
+console.log(zeroFuel(50, 25, 2), true);
+console.log(zeroFuel(100, 50, 1), false);
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//     return distanceToPump / mpg <= fuelLeft
+// };
+
+console.log('-------------------');
+
+function differenceInAges(ages) {
+    let largest = ages[0];
+
+    for (let i = 0; i < ages.length; i++) {
+        if (ages[i] > largest) {
+            largest = ages[i];
+        }
+    }
+    let smallest = ages[0];
+    for (let i = 0; i < ages.length; i++) {
+        if (ages[i] < smallest) {
+            smallest = ages[i];
+        }
+    }
+    return [smallest, largest, largest - smallest];
+}
+console.log(differenceInAges([82, 15, 6, 38, 35]), [6, 82, 76]);
+console.log(differenceInAges([57, 99, 14, 32]), [14, 99, 85]);
+
+// function differenceInAges(ages) {
+
+//     let max = Math.max(...ages),
+//         min = Math.min(...ages)
+//     diff = max - min
+
+//     return [min, max, diff]
+// }
+
+console.log('-------------------');
+
+
+const opposite = (number) => number - number - number;
+
+
+console.log(opposite(1), -1);
+console.log(opposite(0), 0);
+console.log(opposite(4.25), -4.25);
+console.log(opposite(3.3333333), -3.3333333);
+console.log(opposite(-12525220.3325), 12525220.3325);
+console.log(opposite(-5), 5);
+
+// function opposite(number) {
+//     return (-number);
+// }
+
+console.log('-------------------');
+
+const litres = (time) => Math.floor(time * 0.5);
+
+
+console.log(litres(2), 1, 'should return 1 litre');
+console.log(litres(1.4), 0, 'should return 0 litres');
+console.log(litres(12.3), 6, 'should return 6 litres');
+console.log(litres(0.82), 0, 'should return 0 litres');
+console.log(litres(11.8), 5, 'should return 5 litres');
+console.log(litres(1787), 893, 'should return 893 litres');
+console.log(litres(0), 0, 'should return 0 litres');
+
+console.log('-------------------');
+
+
+
+function pillars(numPill, dist, width) {
+    if (numPill <= 1) {
+        return 0;
+    } else {
+        return ((numPill - 1) * dist * 100) + ((numPill - 2) * width);
+    }
+}
+
+console.log(pillars(1, 10, 10), 0);
+console.log(pillars(11, 15, 30), 15270);
+console.log(pillars(2, 20, 25), 2000);
+
+// function pillars(num_pill, dist, width) {
+//     // your code here
+//     return num_pill > 1 ? (num_pill - 1) * dist * 100 + (num_pill - 2) * width : 0;
+// }
+
+console.log('-------------------');
+
+const simpleMultiplication = (number) => number % 2 === 0 ? number * 8 : number * 9;
+
+
+console.log(simpleMultiplication(2), 16, 'Should return given argument times eight...')
+console.log(simpleMultiplication(1), 9, 'Should return given argument times nine...')
+console.log(simpleMultiplication(8), 64, 'Should return given argument times eight...')
+console.log(simpleMultiplication(4), 32, 'Should return given argument times eight...')
+console.log(simpleMultiplication(5), 45, 'Should return given argument times nine...')
+
+// function simpleMultiplication(n) {
+//     return n * (n % 2 ? 9 : 8);
+// }
+
+console.log('-------------------');
+
+function getAverage(marks) {
+    let result = 0;
+    for (let i = 0; i < marks.length; i++) {
+        result += marks[i];
+
+    }
+    return Math.floor(result / marks.length);
+}
+
+console.log(getAverage([2, 2, 2, 2]), 2);
+console.log(getAverage([1, 2, 3, 4, 5,]), 3);
+console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2]), 1);
+
+// function getAverage(marks) {
+//     return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+// }
+
+console.log('-------------------');
+
+function reverseList(list) {
+    let total = 0;
+    let i = 0;
+    for (let i = list.length - 1; i >= 0; i--) {
+        const arrayOfDigits = Array.from(list[i]);
+
+    }
+    return total;
+
+}
+
+console.log(reverseList([1, 2, 3, 4]), [4, 3, 2, 1]);
+console.log(reverseList([3, 1, 5, 4]), [4, 5, 1, 3]);
+
 
