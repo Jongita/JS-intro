@@ -475,10 +475,12 @@ function between(a, b) {
 
 }
 
-console.log('----Num to string---------------');
+
 
 console.log(between(1, 4), [1, 2, 3, 4]);
 console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
+
+console.log('----Num to string---------------');
 
 function numberToString(num) {
     let string1 = String(num);
@@ -802,18 +804,88 @@ console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2]), 1);
 
 console.log('-------------------');
 
-function reverseList(list) {
-    let total = 0;
-    let i = 0;
-    for (let i = list.length - 1; i >= 0; i--) {
-        const arrayOfDigits = Array.from(list[i]);
+function capitalizeWord(word) {
+    const firstLetter = word[0].toUpperCase();
+    const otherLetters = word.slice(1).toLowerCase();
 
+    return firstLetter + otherLetters;
+}
+
+
+console.log(capitalizeWord('word'), 'Word');
+console.log(capitalizeWord('i'), 'I');
+console.log(capitalizeWord('glasswear'), 'Glasswear');
+
+// function capitalizeWord(word) {
+//     return word[0].toUpperCase() + word.slice(1);
+// }
+
+
+const checkForFactor = (base, factor) => (base / factor) % 1 === 0 ? true : false;
+
+
+console.log(checkForFactor(10, 2), true)
+console.log(checkForFactor(63, 7), true)
+console.log(checkForFactor(2450, 5), true)
+console.log(checkForFactor(24612, 3), true)
+console.log(checkForFactor(9, 2), false)
+console.log(checkForFactor(653, 7), false)
+console.log(checkForFactor(2453, 5), false)
+console.log(checkForFactor(24617, 3), false)
+
+
+// function checkForFactor(base, factor) {
+//     return base % factor === 0;
+// }
+
+console.log('-------------------');
+
+function grow(x) {
+    let result = 1;
+    for (const number of x) {
+        if (number > 0) {
+            result *= number;
+        };
     }
-    return total;
+    return result;
+}
 
+console.log(grow([1, 2, 3]), 6);
+console.log(grow([4, 1, 1, 1, 4]), 16);
+console.log(grow([2, 2, 2, 2, 2, 2]), 64);
+
+// const grow = x => x.reduce((a, b) => a * b);
+// function grow(x) {
+//     return x.reduce((a, b) => a * b, 1);
+// }
+
+console.log('-------------------');
+
+// neissprestas     Removing Elements
+
+function removeEveryOther(arr) {
+
+    let result = [];
+    for (let i = 0; i < arr.length; i += 2) {
+        result += arr[i];
+    }
+    return result.split([" "]);
+}
+
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']), ['Hello', 'Hello Again']);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
+console.log(removeEveryOther([['Goodbye'], { 'Great': 'Job' }]), [['Goodbye']]);
+
+console.log('-------------------');
+
+function reverseList(list) {
+    return list.reverse();
 }
 
 console.log(reverseList([1, 2, 3, 4]), [4, 3, 2, 1]);
 console.log(reverseList([3, 1, 5, 4]), [4, 5, 1, 3]);
 
-
+// Mazejancia tvarka:
+// return list.sort((a, b) => b - a);
+// return list.sort((a, b) => b - a);

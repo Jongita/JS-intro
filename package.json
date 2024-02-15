@@ -26,6 +26,8 @@
     "map": "node --watch ./methods/map.js",
     "methodsstring2": "node --watch ./methods/string2.js",
     "methodsarray": "node --watch ./methods/array.js",
+    "filter": "node --watch ./methods/filter.js",
+    "sort": "node --watch ./methods/sort.js",
     "jjnd": "node --watch ./Namu-Darbai/jjnd.js",
     "codewars": "node --watch ./Namu-Darbai/codewars.js",
     "index": "node --watch ./index.js",
