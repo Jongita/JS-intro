@@ -44,7 +44,6 @@ function updateMarks() {
 
     for (const mark of marks) {
         const newMarkValue = mark * 2;
-        newMarks.push(newMarkValue);
         if (newMarkValue <= 10) {
             newMarks.push(newMarkValue);
         } else {
@@ -56,22 +55,48 @@ function updateMarks() {
 }
 console.log(updateMarks(pazymiai));
 
+
 const geresniPazymiai = pazymiai
     .map(n => n * 2 > 10 ? 10 : n * 2);
 console.log(geresniPazymiai);
 
+console.log('--------------------------------');
+
+function geresnispazymys(n) {
+    if (n * 2 > 10) {
+        return 10;
+    }
+    return n * 2;
+}
+
+function updateMarks(marks) {
+    const newMarks = [];
+
+    for (const mark of marks) {
+        newMarks.push(geresnispazymys(mark));
+    }
+
+    return newMarks;
+}
+
+console.log(updateMarks(pazymiai));
+
+
+
 const geresniPazymiai2 = pazymiai.map(geresnisPazymys);
 console.log(geresniPazymiai2);
 
+console.log('--------------------------------');
 
 const students = ['Jonas', 'Maryte', 'Petras', 'Ona'];
+
+// const abbr = students.map(name => name[0]);
+// console.log(abbr);
 
 function lastChar(text) {
     // const lastCharIndex = text.length - 1;
     // return text[lastCharIndex];
-
     return text[text.length - 1];
 }
-
 const abbr = students.map(lastChar);
 console.log(abbr);

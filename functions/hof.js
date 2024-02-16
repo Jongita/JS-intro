@@ -24,13 +24,13 @@ HOF - higher order function
 // //         return sum(a, b);
 // //     }
 // //     if (opera === '-') {
-// //         return sum(a, b);
+// //         return diff(a, b);
 // //     }
 // //     if (opera === '*') {
-// //         return sum(a, b);
+// //         return multi(a, b);
 // //     }
 // //     if (opera === '/') {
-// //         return sum(a, b);
+// //         return div(a, b);
 // //     }
 // // }
 // // const res1 = math(7, '+', 5);

@@ -15,9 +15,6 @@ function basicOp(operation, value1, value2) {
     return result;
 };
 
-
-
-
 console.log(basicOp("+", 4, 7), 11, "4 + 7 = 11");
 console.log(basicOp("-", 15, 18), -3, "15 - 18 = -3");
 console.log(basicOp("*", 5, 5), 25, "5 * 5 = 25");
@@ -45,8 +42,6 @@ function isSquare(n) {
 }
 
 
-
-
 console.log(isSquare(-1), false, "-1: Negative numbers cannot be square numbers");
 console.log(isSquare(0), true, "0 is a square number (0 * 0)");
 console.log(isSquare(3), false, "3 is not a square number");
@@ -56,6 +51,8 @@ console.log(isSquare(26), false, "26 is not a square number");
 
 // if (d === n) {
 //     return true;
+
+console.log('----------------------------');
 
 function testEven(n) {
     if (n % 2 !== 0) {
@@ -70,6 +67,7 @@ console.log(testEven(1), false, "testEven for 1");
 console.log(testEven(2), true, "testEven for 2");
 console.log(testEven(-4), true, "testEven for 2");
 
+console.log('----------------------------');
 
 function createPhoneNumber(numbers) {
     result = `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
@@ -77,6 +75,7 @@ function createPhoneNumber(numbers) {
 }
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
+console.log('----------------------------');
 
 function arithmetic(a, b, operator) {
     if (operator === "add") {
@@ -128,6 +127,8 @@ console.log(positiveSum([-1, 2, 3, 4, -5]), 9);
 //     }
 //     return total;                         // return total
 // }
+
+console.log('----------------------------');
 
 function whatday(num) {
     if (num === 1) {
@@ -287,6 +288,8 @@ console.log(smash(["this", "is", "a", "really", "long", "sentence"]), "this is a
 // smash = function (words) {
 //     return words.join(" ");
 // };
+
+console.log('----------------------------');
 
 
 function peopleWithAgeDrink(old) {
@@ -463,6 +466,8 @@ console.log(solution('h'), 'h');
 //     return str.split('').reverse().join('');
 // }
 
+console.log('----------------------------');
+
 function between(a, b) {
     let total = 0;
     let i = 0;
@@ -474,8 +479,6 @@ function between(a, b) {
 
 
 }
-
-
 
 console.log(between(1, 4), [1, 2, 3, 4]);
 console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
@@ -662,6 +665,8 @@ console.log(stringToNumber("-7"), -7)
 //     return parseInt(str);
 // }
 
+console.log('----------------------------');
+
 function enough(cap, on, wait) {
     if (on + wait < cap) {
         return 0;
@@ -820,6 +825,7 @@ console.log(capitalizeWord('glasswear'), 'Glasswear');
 //     return word[0].toUpperCase() + word.slice(1);
 // }
 
+console.log('----------------------------');
 
 const checkForFactor = (base, factor) => (base / factor) % 1 === 0 ? true : false;
 
@@ -889,3 +895,51 @@ console.log(reverseList([3, 1, 5, 4]), [4, 5, 1, 3]);
 // Mazejancia tvarka:
 // return list.sort((a, b) => b - a);
 // return list.sort((a, b) => b - a);
+
+console.log('-------------------');
+
+function otherAngle(a, b) {
+    return 180 - a - b;
+}
+
+console.log(otherAngle(30, 60), 90);
+console.log(otherAngle(60, 60), 60);
+console.log(otherAngle(43, 78), 59);
+console.log(otherAngle(10, 20), 150);
+
+console.log('-------------------');
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+    const totalBalls = blueStart + redStart;
+    const totalPulled = redPulled + bluePulled;
+    return (blueStart - bluePulled) / (totalBalls - totalPulled);
+}
+console.log(guessBlue(5, 5, 2, 3), 0.6);
+console.log(guessBlue(5, 7, 4, 3), 0.2);
+console.log(guessBlue(12, 18, 4, 6), 0.4);
+
+
+console.log('-------------------');
+
+// function digitize(n) {
+//     let myInt = n;
+
+//     // Getting the string as a parameter
+//     // and typecasting it into an integer
+//     let myFunc = num => Number(num);
+
+//     let intArr = Array.from(String(myInt), myFunc);
+
+//     // Print the result array
+//     console.log(intArr);
+//     let total = 0;
+//     for (let i = intArr.length - 1; i >= 0; i--) {
+//         total += intArr[i];
+//         console.log(total, intArr[i]);
+//     }
+//     return
+// }
+
+// console.log(digitize(35231), [1, 3, 2, 5, 3]);
+// console.log(digitize(0), [0]);
+

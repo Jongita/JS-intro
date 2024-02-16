@@ -30,6 +30,7 @@
     "sort": "node --watch ./methods/sort.js",
     "jjnd": "node --watch ./Namu-Darbai/jjnd.js",
     "codewars": "node --watch ./Namu-Darbai/codewars.js",
+    "draft": "node --watch ./Namu-Darbai/draft.js",
     "index": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test2": "echo \"Error: no test2 specified\" && exit 2"
