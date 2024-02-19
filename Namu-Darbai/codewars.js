@@ -943,6 +943,8 @@ console.log('-------------------');
 // console.log(digitize(35231), [1, 3, 2, 5, 3]);
 // console.log(digitize(0), [0]);
 
+console.log('-------------------');
+
 function summation(num) {
     let result1 = 0;
     let i = 0;
@@ -960,6 +962,8 @@ console.log(summation(8), 36);
 //     return num * (num + 1) / 2
 // }
 
+console.log('-------------------');
+
 const past = (h, m, s) => (h * 3600000) + (m * 60000) + (s * 1000);
 
 
@@ -969,6 +973,8 @@ console.log(past(1, 1, 1), 3661000)
 console.log(past(0, 0, 0), 0)
 console.log(past(1, 0, 1), 3601000)
 console.log(past(1, 0, 0), 3600000)
+
+console.log('-------------------');
 
 function century(year) {
     const century = year / 100;
@@ -993,9 +999,22 @@ console.log(century(426759), 4268, 'Testing for year 4268');
 
 // const century = year => Math.ceil(year / 100)
 
-function addLength(str) {
+console.log('-------------------');
 
-}
+// function switchItUp(number) {
+//     const wordNumber = number.string;
+//     console.log(wordNumber);
+// }
+
+// console.log(switchItUp(1), "One");
+// console.log(switchItUp(3), "Three");
+// console.log(switchItUp(5), "Five");
+
+// const hotpo = (n) => n % 2 === 0 ? (n / 2) : (3 * n + 1);
 
 
-console.log(addLength('you will win'), ["you 3", "will 4", "win 3"]);
+
+// console.log(hotpo(1), 0);
+// console.log(hotpo(5), 5);
+// console.log(hotpo(6), 8);
+// console.log(hotpo(23), 15);

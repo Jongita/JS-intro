@@ -30,7 +30,7 @@ const students = [
 // for (let i = 0; i < students.length; i++) {
 //     const markLength = students[i].marks.length;
 //     console.log(markLength);
-// }
+// }objects
 
 
 
