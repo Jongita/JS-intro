@@ -943,3 +943,59 @@ console.log('-------------------');
 // console.log(digitize(35231), [1, 3, 2, 5, 3]);
 // console.log(digitize(0), [0]);
 
+function summation(num) {
+    let result1 = 0;
+    let i = 0;
+    for (let i = 1; i <= num; i++) {
+        result1 += i;
+    }
+    return result1;
+}
+
+console.log(summation(1), 1);
+console.log(summation(2), 3);
+console.log(summation(8), 36);
+
+// function summation(num) {
+//     return num * (num + 1) / 2
+// }
+
+const past = (h, m, s) => (h * 3600000) + (m * 60000) + (s * 1000);
+
+
+
+console.log(past(0, 1, 1), 61000)
+console.log(past(1, 1, 1), 3661000)
+console.log(past(0, 0, 0), 0)
+console.log(past(1, 0, 1), 3601000)
+console.log(past(1, 0, 0), 3600000)
+
+function century(year) {
+    const century = year / 100;
+    if (century < 1) {
+        return 1;
+    }
+    if (century % 1 === 0) {
+        return Math.round(century);
+    }
+    if (century % 1 !== 0); {
+        return Math.round(century + 0.5);
+    }
+
+}
+
+console.log(century(1705), 18, 'Testing for year 1705');
+console.log(century(1900), 19, 'Testing for year 1900');
+console.log(century(1601), 17, 'Testing for year 1601');
+console.log(century(2000), 20, 'Testing for year 2000');
+console.log(century(89), 1, 'Testing for year 89');
+console.log(century(426759), 4268, 'Testing for year 4268');
+
+// const century = year => Math.ceil(year / 100)
+
+function addLength(str) {
+
+}
+
+
+console.log(addLength('you will win'), ["you 3", "will 4", "win 3"]);

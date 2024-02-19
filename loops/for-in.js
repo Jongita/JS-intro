@@ -43,6 +43,8 @@ for (let i = 0; i < carKeys.length; i++) {
     console.log(i, key, value);
 }
 
+
 for (const key in car) {
-    const value = car
+    const value = car[key];
+    console.log(key, value);
 }
