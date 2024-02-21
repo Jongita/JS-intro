@@ -28,15 +28,15 @@ const students = [
 //     console.log(students[i]);
 // }
 
-for (let i = 0; i < students.length; i++) {
-    const marks = students[i].marks;
-    console.log(students[i].marks);
-}
-let average = 0;
-for (let i = 0; i < marks.length; i++) {
-    average = + marks[i];
-    console.log(average);
-}
+// for (let i = 0; i < students.length; i++) {
+//     const marks = students[i].marks;
+//     console.log(students[i].marks);
+// }
+// let average = 0;
+// for (let i = 0; i < marks.length; i++) {
+//     average = + marks[i];
+//     console.log(average);
+// }
 
 
 
@@ -152,4 +152,33 @@ for (let i = 0; i < marks.length; i++) {
 
 // console.log('-----------------');
 
+console.log(Math.E);
+console.log(Math.PI);
+console.log(Math.SQRT2);
 
+console.log(Math.abs(-7777));
+console.log(Math.abs(7777));
+
+console.log(Math.exp(9), Math.E ** 9);
+
+console.log(Math.sign(-7125485));
+console.log(Math.sign(74562));
+console.log(Math.sign(0));
+
+
+
+// min=0; max=5
+// min=1; max=6
+// min=2; max=7
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const count5 = Array(6).fill(0);
+const min = 2;
+for (let i = 0; i < 5; i++) {
+    const r = random(min, 7);
+    count5[r - min]++;
+}
+
+console.log(count5);
