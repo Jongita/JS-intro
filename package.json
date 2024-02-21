@@ -1,9 +1,9 @@
 {
   "name": "js-intro",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module", 
+  "main": "index.js", 
   "scripts": {
-
     "if": "node --watch ./compare/if.js",
     "ternary": "node --watch ./compare/ternary.js",
     "typeof": "node --watch ./compare/typeof.js",
@@ -19,6 +19,8 @@
     "arrow": "node --watch ./functions/arrow.js",
     "function": "node --watch ./functions/function.js",
     "hof": "node --watch ./functions/hof.js",
+    "class": "node --watch ./functions/class.js",
+    "animals": "node --watch ./class/index.js",
     "for-of": "node --watch ./loops/for-of.js",
     "for-in": "node --watch ./loops/for-in.js",
     "for": "node --watch ./loops/for.js",
