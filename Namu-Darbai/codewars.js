@@ -590,28 +590,28 @@ console.log(tripleTrouble("aaa", "bbb", "ccc"), "abcabcabc");
 
 // Pythagorean Triple
 
-function isPythagoreanTriple(integers) {
-    const a = integers[0];
-    const b = integers[1];
-    const c = integers[2];
+// function isPythagoreanTriple(integers) {
+//     const a = integers[0];
+//     const b = integers[1];
+//     const c = integers[2];
 
-    if (a ** 2 + b ** 2 === c ** 2) {
-        return true;
-    }
-    if (a ** 2 + c ** 2 === b ** 2) {
-        return true;
-    }
-    if (b ** 2 + c ** 2 === a ** 2) {
-        return true;
-    }
-    return false;
-}
+//     if (a ** 2 + b ** 2 === c ** 2) {
+//         return true;
+//     }
+//     if (a ** 2 + c ** 2 === b ** 2) {
+//         return true;
+//     }
+//     if (b ** 2 + c ** 2 === a ** 2) {
+//         return true;
+//     }
+//     return false;
+// }
 
-console.log('-------------------');
+// console.log('-------------------');
 
-console.log(isPythagoreanTriple([3, 4, 5]), true);
-console.log(isPythagoreanTriple([3, 5, 9]), false);
-console.log(isPythagoreanTriple([2232, 2418, 930]), true);
+// console.log(isPythagoreanTriple([3, 4, 5]), true);
+// console.log(isPythagoreanTriple([3, 5, 9]), false);
+// console.log(isPythagoreanTriple([2232, 2418, 930]), true);
 
 function tripleTrouble(one, two, three) {
     const sumThree = one + two + three;
@@ -1010,6 +1010,8 @@ console.log('-------------------');
 // console.log(switchItUp(3), "Three");
 // console.log(switchItUp(5), "Five");
 
+
+
 // const hotpo = (n) => n % 2 === 0 ? (n / 2) : (3 * n + 1);
 
 
@@ -1018,3 +1020,34 @@ console.log('-------------------');
 // console.log(hotpo(5), 5);
 // console.log(hotpo(6), 8);
 // console.log(hotpo(23), 15);
+
+
+function amountOfPages(summary) {
+    let result = 0;
+    for (const number of summary); {
+        result = + number;
+    }
+    return result;
+
+
+}
+
+console.log(amountOfPages(5), 5)
+console.log(amountOfPages(10), 11)
+// console.log(amountOfPages(25), 17)
+// console.log(amountOfPages(1095), 401)
+// console.log(amountOfPages(185), 97)
+// console.log(amountOfPages(660), 256)
+
+function switchItUp(n) {
+    return [
+        'Zero', 'One', 'Two', 'Three', 'Four',
+        'Five', 'Six', 'Seven', 'Eight', 'Nine',
+    ][n];
+}
+
+console.log(switchItUp(1), "One");
+console.log(switchItUp(3), "Three");
+console.log(switchItUp(5), "Five");
+
+// switchItUp = n => ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][n]

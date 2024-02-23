@@ -6,7 +6,14 @@ class Hamster extends Pet {
         this.breed = 'hamster';
         this.sound = 'nom nom';
         this.emoji = '🐹🐹';
+        this.foodAmount = 0;
     }
-}
 
+    eat(amount) {
+        this.foodAmount += amount;
+        return (`${this.name} burnoje siuo metu yra ${this.foodAmount} morku.`);
+    }
+
+}
 export default Hamster;
+

@@ -34,6 +34,7 @@
     "spread": "node --watch ./methods/spread.js",
     "math": "node --watch ./methods/math.js",
     "jjnd": "node --watch ./Namu-Darbai/jjnd.js",
+    "fridaynd": "node --watch ./Namu-Darbai/fridaynd.js",
     "codewars": "node --watch ./Namu-Darbai/codewars.js",
     "draft": "node --watch ./Namu-Darbai/draft.js",
     "ndobjects": "node --watch ./Namu-Darbai/ndobjects.js",
