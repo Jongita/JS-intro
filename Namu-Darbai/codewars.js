@@ -1051,3 +1051,208 @@ console.log(switchItUp(3), "Three");
 console.log(switchItUp(5), "Five");
 
 // switchItUp = n => ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"][n]
+
+console.log('------------------------------------');
+
+function countSheeps(sheep) {
+    let result = 0;
+    for (const n of sheep) {
+        if (n === true) {
+            result++;
+        }
+
+    }
+    return result;
+}
+
+console.log(countSheeps([undefined]), 0);
+// console.log(countSheeps[[null]), 0);
+// console.log(countSheeps[false], 0);
+// console.log(countSheeps([true]), 1);
+// console.log(countSheeps[[undefined, null, false, true], 1]);
+// console.log(countSheeps[[undefined, null, false, true, true, false, null, undefined], 2]);
+// console.log(countSheeps([true, true, true, false, true, true, true, true, true, false, true, false, true, false, false, true, true, true, true, true, false, false, true, true]), 17);
+
+
+function correctPolishLetters(string) {
+    let result = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === 'ą') {
+            result += 'a';
+        } else if (string[i] === 'ć') {
+            result += 'c';
+        } else if (string[i] === 'ę') {
+            result += 'e';
+        } else if (string[i] === 'ł') {
+            result += 'l';
+        } else if (string[i] === 'ń') {
+            result += 'n';
+        } else if (string[i] === 'ó') {
+            result += 'o';
+        } else if (string[i] === 'ś') {
+            result += 's';
+        } else if (string[i] === 'ź') {
+            result += 'z';
+        } else if (string[i] === 'ż') {
+            result += 'z';
+        } else {
+            result += string[i];
+        }
+    }
+    return result;
+}
+console.log(correctPolishLetters("Jędrzej Błądziński"), "Jedrzej Bladzinski");
+console.log(correctPolishLetters("Lech Wałęsa"), "Lech Walesa");
+console.log(correctPolishLetters("Maria Skłodowska-Curie"), "Maria Sklodowska-Curie");
+
+// var mapping = {
+//     'ą': 'a',
+//     'ć': 'c',
+//     'ę': 'e',
+//     'ł': 'l',
+//     'ń': 'n',
+//     'ó': 'o',
+//     'ś': 's',
+//     'ź': 'z',
+//     'ż': 'z',
+// };
+
+// function correctPolishLetters(text) {
+//     return text.split('').map(c => mapping[c] || c).join('');
+
+
+function getPlanetName(id) {
+    var name;
+    switch (id) {
+        case 1:
+            name = 'Mercury'
+        case 2:
+            name = 'Venus'
+        case 3:
+            name = 'Earth'
+        case 4:
+            name = 'Mars'
+        case 5:
+            name = 'Jupiter'
+        case 6:
+            name = 'Saturn'
+        case 7:
+            name = 'Uranus'
+        case 8:
+            name = 'Neptune'
+    }
+
+    return name;
+}
+
+console.log(getPlanetName(2), 'Venus');
+console.log(getPlanetName(5), 'Jupiter');
+console.log(getPlanetName(3), 'Earth');
+
+function strCount(str, letter) {
+
+    let result = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === letter) {
+            result += [i].length;
+        }
+    }
+    return result;
+}
+
+console.log(strCount('Hello', 'o'), 1);
+console.log(strCount('Hello', 'l'), 2);
+console.log(strCount('', 'z'), 0);
+
+// function strCount(str, letter) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] == letter)
+//             count++;
+//     }
+//     return count;
+// }
+
+// function strCount(str, letter) {
+//     return str.split(letter).length - 1
+// }
+
+const hero = (bullets, dragons) => dragons * 2 <= bullets ? true : false;
+
+
+console.log(hero(10, 5), true);
+console.log(hero(7, 4), false);
+console.log(hero(4, 5), false);
+console.log(hero(100, 40), true);
+console.log(hero(1500, 751), false);
+console.log(hero(0, 1), false);
+
+function getDrinkByProfession(param) {
+    const letter = param.toLowerCase();
+
+    if (letter === 'jabroni') {
+        return 'Patron Tequila';
+    }
+    if (letter === 'school counselor') {
+        return 'Anything with Alcohol';
+    }
+    if (letter === 'programmer') {
+        return 'Hipster Craft Beer';
+    }
+    if (letter === 'bike gang member') {
+        return 'Moonshine';
+    }
+    if (letter === 'politician') {
+        return 'Your tax dollars';
+    }
+    if (letter === 'rapper') {
+        return 'Cristal';
+    } else {
+        return 'Beer';
+    }
+}
+
+
+
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+console.log(getDrinkByProfession("rapper"), "Cristal", "'Rapper' should map to 'Cristal'");
+console.log(getDrinkByProfession("pundit"), "Beer", "'Pundit' should map to 'Beer'");
+console.log(getDrinkByProfession("Pug"), "Beer", "'Pug' should map to 'Beer'");
+
+
+
+// function getDrinkByProfession(param) {
+//     param = param.toLowerCase();
+
+//     switch (param) {
+//         case "jabroni": return "Patron Tequila";
+//         case "school counselor": return "Anything with Alcohol";
+//         case "programmer": return "Hipster Craft Beer";
+//         case "bike gang member": return "Moonshine";
+//         case "politician": return "Your tax dollars";
+//         case "rapper": return "Cristal";
+//         default: return "Beer";
+//     }
+// }
+
+function tripleTrouble(one, two, three) {
+    let result = '';
+    for (let i = 0; i < one.length; i++) {
+        result += one[i] + two[i] + three[i];
+    }
+    return result;
+}
+
+// const tripleTrouble = (one, two, three) => one.split("").map((letter, index) => letter + two[index] + three[index]).join("");
+
+console.log(tripleTrouble("aaa", "bbb", "ccc"), "abcabcabc");
+console.log(tripleTrouble("aaaaaa", "bbbbbb", "cccccc"), "abcabcabcabcabcabc");
+console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
+console.log(tripleTrouble("Sea", "urn", "pms"), "Supermans");
+console.log(tripleTrouble("LLh", "euo", "xtr"), "LexLuthor");
+
+

@@ -261,22 +261,260 @@ console.log(switchItUp(5), "Five");
 console.log('-----------------');
 
 function countSheeps(sheep) {
-    let result = [];
+    let result = 0;
     for (const n of sheep) {
         if (n === true) {
-            result.split(n)
+            result++;
         }
 
     }
+    return result;
 }
 
-console.log(countSheeps([undefined], 0));
-// console.log(countSheeps[[null], 0]);
-// console.log(countSheeps[[false], 0]);
-// console.log(countSheeps[[true], 1]);
+console.log(countSheeps([undefined]), 0);
+// console.log(countSheeps[[null]), 0);
+// console.log(countSheeps[false], 0);
+// console.log(countSheeps([true]), 1);
 // console.log(countSheeps[[undefined, null, false, true], 1]);
 // console.log(countSheeps[[undefined, null, false, true, true, false, null, undefined], 2]);
-console.log(countSheeps([true, true, true, false, true, true, true, true, true, false, true, false, true, false, false, true, true, true, true, true, false, false, true, true], 17));
+console.log(countSheeps([true, true, true, false, true, true, true, true, true, false, true, false, true, false, false, true, true, true, true, true, false, false, true, true]), 17);
+
+
+function correctPolishLetters(string) {
+    let result = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === 'ą') {
+            result += 'a';
+        } else if (string[i] === 'ć') {
+            result += 'c';
+        } else if (string[i] === 'ę') {
+            result += 'e';
+        } else if (string[i] === 'ł') {
+            result += 'l';
+        } else if (string[i] === 'ń') {
+            result += 'n';
+        } else if (string[i] === 'ó') {
+            result += 'o';
+        } else if (string[i] === 'ś') {
+            result += 's';
+        } else if (string[i] === 'ź') {
+            result += 'z';
+        } else if (string[i] === 'ż') {
+            result += 'z';
+        } else {
+            result += string[i];
+        }
+    }
+    return result;
+}
+console.log(correctPolishLetters("Jędrzej Błądziński"), "Jedrzej Bladzinski");
+console.log(correctPolishLetters("Lech Wałęsa"), "Lech Walesa");
+console.log(correctPolishLetters("Maria Skłodowska-Curie"), "Maria Sklodowska-Curie");
+
+// var mapping = {
+//     'ą': 'a',
+//     'ć': 'c',
+//     'ę': 'e',
+//     'ł': 'l',
+//     'ń': 'n',
+//     'ó': 'o',
+//     'ś': 's',
+//     'ź': 'z',
+//     'ż': 'z',
+// };
+
+// function correctPolishLetters(text) {
+//     return text.split('').map(c => mapping[c] || c).join('');
+
+function getPlanetName(id) {
+    var name;
+    switch (id) {
+        case 1:
+            name = 'Mercury'
+            break;
+        case 2:
+            name = 'Venus'
+            break;
+        case 3:
+            name = 'Earth'
+            break;
+        case 4:
+            name = 'Mars'
+            break;
+        case 5:
+            name = 'Jupiter'
+            break;
+        case 6:
+            name = 'Saturn'
+            break;
+        case 7:
+            name = 'Uranus'
+            break;
+        case 8:
+            name = 'Neptune'
+            break;
+    }
+
+    return name;
+}
+
+console.log(getPlanetName(2), 'Venus');
+console.log(getPlanetName(5), 'Jupiter');
+console.log(getPlanetName(3), 'Earth');
+
+console.log('-------------------------------');
+
+function strCount(str, letter) {
+
+    let result = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === letter) {
+            result++;
+        }
+    }
+    return result;
+}
+
+console.log(strCount('Hello', 'o'), 1);
+console.log(strCount('Hello', 'l'), 2);
+console.log(strCount('', 'z'), 0);
+
+// function strCount(str, letter) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] == letter)
+//             count++;
+//     }
+//     return count;
+// }
+
+// function strCount(str, letter) {
+//     return str.split(letter).length - 1
+// }
+
+const hero = (bullets, dragons) => dragons * 2 <= bullets ? true : false;
 
 
 
+
+console.log(hero(10, 5), true);
+console.log(hero(7, 4), false);
+console.log(hero(4, 5), false);
+console.log(hero(100, 40), true);
+console.log(hero(1500, 751), false);
+console.log(hero(0, 1), false);
+
+function getDrinkByProfession(param) {
+    const letter = param.toLowerCase();
+
+    if (letter === 'jabroni') {
+        return 'Patron Tequila';
+    }
+    if (letter === 'school counselor') {
+        return 'Anything with Alcohol';
+    }
+    if (letter === 'programmer') {
+        return 'Hipster Craft Beer';
+    }
+    if (letter === 'bike gang member') {
+        return 'Moonshine';
+    }
+    if (letter === 'politician') {
+        return 'Your tax dollars';
+    }
+    if (letter === 'rapper') {
+        return 'Cristal';
+    } else {
+        return 'Beer';
+    }
+}
+
+
+
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+console.log(getDrinkByProfession("rapper"), "Cristal", "'Rapper' should map to 'Cristal'");
+console.log(getDrinkByProfession("pundit"), "Beer", "'Pundit' should map to 'Beer'");
+console.log(getDrinkByProfession("Pug"), "Beer", "'Pug' should map to 'Beer'");
+
+
+
+// function getDrinkByProfession(param) {
+//     param = param.toLowerCase();
+
+//     switch (param) {
+//         case "jabroni": return "Patron Tequila";
+//         case "school counselor": return "Anything with Alcohol";
+//         case "programmer": return "Hipster Craft Beer";
+//         case "bike gang member": return "Moonshine";
+//         case "politician": return "Your tax dollars";
+//         case "rapper": return "Cristal";
+//         default: return "Beer";
+//     }
+// }
+
+function tripleTrouble(one, two, three) {
+    let result = '';
+    for (let i = 0; i < one.length; i++) {
+        result += one[i] + two[i] + three[i];
+    }
+    return result;
+}
+
+// const tripleTrouble = (one, two, three) => one.split("").map((letter, index) => letter + two[index] + three[index]).join("");
+
+console.log(tripleTrouble("aaa", "bbb", "ccc"), "abcabcabc");
+console.log(tripleTrouble("aaaaaa", "bbbbbb", "cccccc"), "abcabcabcabcabcabc");
+console.log(tripleTrouble("burn", "reds", "roll"), "brrueordlnsl");
+console.log(tripleTrouble("Sea", "urn", "pms"), "Supermans");
+console.log(tripleTrouble("LLh", "euo", "xtr"), "LexLuthor");
+
+console.log('-----------------------------------');
+
+function magNumber(input) {
+    const input1 = input[0];
+    const input2 = input[1] * 3;
+
+    if (input1 === 'PT92') {
+        return Math.ceil(input2 / 17);
+    }
+    if (input1 === 'M4A1') {
+        return Math.ceil(input2 / 30);
+    }
+    if (input1 === 'M16A2') {
+        return Math.ceil(input2 / 30);
+    }
+    if (input1 === 'PSG1') {
+        return Math.ceil(input2 / 5);
+    }
+
+}
+console.log(magNumber(["PT92", 6]), 2);
+console.log(magNumber(["M4A1", 8]), 1);
+console.log(magNumber(["M16A2", 19]), 2);
+console.log(magNumber(["PSG1", 31]), 19);
+console.log(magNumber(["PT92", 19]), 4);
+console.log(magNumber(["M4A1", 4]), 1);
+
+// PT92 - 17 bullets
+// M4A1 - 30 bullets
+// M16A2 - 30 bullets
+// PSG1 - 5 bullets
+
+function reverseWords(str) {
+    let result = '';
+    for (let i = str.length; i >= 0; i--) {
+        result += str[i];
+    }
+    return result;
+};
+
+console.log(reverseWords("hello world!"), "world! hello");
+console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda");
+console.log(reverseWords("foobar"), "foobar");
+console.log(reverseWords("kata editor"), "editor kata");
+console.log(reverseWords("row row row your boat"), "boat your row row row");
+console.log(reverseWords(""), "");
