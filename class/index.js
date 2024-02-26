@@ -37,21 +37,43 @@ const zakas = new Parrot('Zakas', 'green');
 console.log(zakas.intro());
 console.log(zakas.fly());
 console.log(zakas.stopFly());
+console.log(zakas.repeatSound('cik cirik'));
 
 const cika = new Canary('Cika', 'yellow');
 console.log(cika.intro());
+console.log(cika.fly());
+console.log(cika.stopFly());
 
 const baltasis = new Stark('Baltasis', 'white');
 console.log(baltasis.intro());
+console.log(baltasis.fly());
+console.log(baltasis.stopFly());
+console.log(baltasis.bringBabies(1));
+console.log(baltasis.bringBabies(2));
+
 
 
 console.log('-----------------------------------------');
 
 const babyShark = new Shark('BabyShark', 'grey');
 console.log(babyShark.intro());
+console.log(babyShark.swim());
+console.log(babyShark.stopSwim());
+console.log(babyShark.eatHuman());
 
-const karosiukas = new Goldfish('Karosiukas', 'orange');
+const karosiukas = new Goldfish('Karosiukas', 'orange', 3);
 console.log(karosiukas.intro());
+console.log(karosiukas.swim());
+console.log(karosiukas.stopSwim());
+console.log(karosiukas.makeWish('Noriu namo'));
+console.log(karosiukas.makeWish('Noriu pinigu'));
+console.log(karosiukas.makeWish('Noriu atsidurti saloje'));
+console.log(karosiukas.makeWish('Noriu atostogu!'));
+
 
 const orkas = new Dolphin('Orkas', 'blue');
 console.log(orkas.intro());
+console.log(orkas.swim());
+console.log(orkas.stopSwim());
+console.log(orkas.jumpFromWater(1));
+console.log(orkas.jumpFromWater(1));

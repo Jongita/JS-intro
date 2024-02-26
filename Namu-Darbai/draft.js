@@ -518,3 +518,8 @@ console.log(reverseWords("foobar"), "foobar");
 console.log(reverseWords("kata editor"), "editor kata");
 console.log(reverseWords("row row row your boat"), "boat your row row row");
 console.log(reverseWords(""), "");
+
+console.log('----------------');
+
+console.log('Noriu atostogu'.split());
+console.log('Noriu atostogu'.split().length);

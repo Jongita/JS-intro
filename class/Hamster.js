@@ -11,7 +11,7 @@ class Hamster extends Pet {
 
     eat(amount) {
         this.foodAmount += amount;
-        return (`${this.name} burnoje siuo metu yra ${this.foodAmount} morku.`);
+        return (`${this.name} burnoje siuo metu yra ${this.foodAmount} morkos.`);
     }
 
 }

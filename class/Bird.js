@@ -9,7 +9,7 @@ class Bird {
     }
 
     intro() {
-        return `${this.name}: Hi, I am ${this.color} ${this.breed}.`;
+        return `${this.name}: Hi, I am ${this.color} ${this.breed}.${this.emoji}`;
     }
     fly() {
         this.isFlying = true;
@@ -22,3 +22,13 @@ class Bird {
 }
 
 export default Bird;
+
+// - Bird(name, color), intro(), fly(), stopFly():
+// - Parrot(name, color), intro(), fly(), stopFly(), repeatSound(), repeatHistory()
+//     - history
+//     - repeatSound({{ sound }})
+//     - repeatHistory() isspausdina paskutinius 3 jam pasakytus tekstus
+//         - Canary(name, color), intro(), fly(), stopFly()
+//         - Stark(name, color), intro(), fly(), stopFly(), bringBabies()
+//         - babiesCount
+//         - bringBabies(): Zmones i kopustu lauka atnesiau dar viena vaika({{ babiesCount }})

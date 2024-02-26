@@ -5,7 +5,7 @@ class Canary extends Bird {
         super(name, color);
         this.breed = 'canary';
         // this.sound = 'Miau miau';
-        // this.emoji = '🐈🐈';
+        this.emoji = '🐤🐤';
     }
 }
 
