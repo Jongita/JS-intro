@@ -3,9 +3,11 @@ import Fish from './Fish.js';
 class Dolphin extends Fish {
     constructor(name, color) {
         super(name, color);
-        this.breed = 'dolphin';
+        this.breed = 'Dolphin';
+        this.sound = 'Kvi Kvi';
         this.emoji = '🐬🐬';
         this.jumpCount = 0;
+        this.soundRepeatCount = 5;
     }
     jumpFromWater(amount) {
         this.jumpCount += amount;

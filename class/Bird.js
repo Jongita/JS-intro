@@ -1,15 +1,13 @@
-class Bird {
+import Animal from './Animal.js';
+
+class Bird extends Animal {
     constructor(name, color) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.breed = 'Bird';
         this.canFly = false;
         this.isFlying = true;
-
-    }
-
-    intro() {
-        return `${this.name}: Hi, I am ${this.color} ${this.breed}.${this.emoji}`;
+        this.sound = 'paukstis';
+        this.soundRepeatCount = 3;
     }
     fly() {
         this.isFlying = true;
@@ -17,7 +15,7 @@ class Bird {
     }
     stopFly() {
         this.isFlying = false;
-        return `${this.name}: Neskrendu`;
+        return `${this.name}: Nebeskrendu`;
     }
 }
 

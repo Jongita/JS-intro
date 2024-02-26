@@ -1,16 +1,12 @@
-class Pet {
+import Animal from './Animal.js';
+
+class Pet extends Animal {
     constructor(name, color) {
-        this.name = name;
-        this.color = color;
-        this.breed = 'pet';
-        this.sound = 'Au miau niom';
-        this.emoji = '🐕🐈🐹';
-
-
-    }
-
-    intro() {
-        return `${this.name}: Hi, I am ${this.color} ${this.breed}. ${this.sound}!! ${this.emoji}.`;
+        super(name, color);
+        this.soundRepeatCount = 2;
+        this.breed = 'Pet';
+        this.sound = 'naminis';
+        // this.emoji = '🐕🐈🐹';
     }
 }
 

@@ -4,6 +4,7 @@ class Goldfish extends Fish {
     constructor(name, color, wishLimit) {
         super(name, color);
         this.breed = 'goldfish';
+        this.sound = 'Tss Tss';
         this.emoji = '🐠🐠';
         this.canMakeWishes = true;
         this.wishLimit = 3;

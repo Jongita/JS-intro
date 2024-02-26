@@ -4,8 +4,8 @@ class Dog extends Pet {
     constructor(name, color, sound) {
         super(name, color);
 
-        this.breed = 'dog';
-        this.sound = this.doubleSound(sound);
+        this.breed = 'Dog';
+        this.sound = 'au au';
         this.emoji = '🐕🐕';
     }
 

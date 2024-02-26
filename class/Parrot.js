@@ -3,12 +3,13 @@ import Bird from './Bird.js';
 class Parrot extends Bird {
     constructor(name, color) {
         super(name, color);
-        this.breed = 'parrot';
+        this.breed = 'Parrot';
+        this.sound = 'Ka Ka';
         this.emoji = '🦜🦜';
     }
 
     repeatSound(sound) {
-        const str = `${sound} ${sound}`;
+        const str = `${this.sound} ${this.sound}`;
         const repeatedSound = str[0].toUpperCase() + str.slice(1);
         return `${this.name}: ${repeatedSound}`;
     }

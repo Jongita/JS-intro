@@ -3,8 +3,8 @@ import Bird from './Bird.js';
 class Stark extends Bird {
     constructor(name, color) {
         super(name, color);
-        this.breed = 'stark';
-        // this.sound = 'Miau miau';
+        this.breed = 'Stark';
+        this.sound = 'Trr Trr Trr';
         this.emoji = '🦅🦅';
         this.isBringingBabies = true;
         this.babiesCount = 0;

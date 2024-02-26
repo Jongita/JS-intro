@@ -3,7 +3,7 @@ import Pet from './Pet.js';
 class Hamster extends Pet {
     constructor(name, color) {
         super(name, color);
-        this.breed = 'hamster';
+        this.breed = 'Hamster';
         this.sound = 'nom nom';
         this.emoji = '🐹🐹';
         this.foodAmount = 0;

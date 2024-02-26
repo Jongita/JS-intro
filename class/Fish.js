@@ -1,18 +1,17 @@
-class Fish {
+import Animal from './Animal.js';
+
+class Fish extends Animal {
     constructor(name, color) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.breed = 'Fish';
-        // this.sound = 'Au miau niom';
+        this.sound = '';
         // this.emoji = '🐕🐈🐹';
         this.canSwim = true;
         this.isSwimming = true;
-    }
-    intro() {
-        return `${this.name}: Hi, I am ${this.color} ${this.breed}.${this.emoji}`;
+        this.soundRepeatCount = 0;
     }
     swim() {
-        this.canSwim = true;
+        this.isSwimming = true;
         return `${this.name}: As plaukiu`;
     }
     stopSwim() {

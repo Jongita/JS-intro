@@ -2,6 +2,9 @@
 Animals
 */
 
+import Pet from "./Pet.js";
+import Bird from "./Bird.js";
+import Fish from "./Fish.js";
 import Dog from "./Dog.js";
 import Cat from "./Cat.js";
 import Hamster from "./Hamster.js";
@@ -17,11 +20,15 @@ const rexas = new Dog('Rexas', 'brown', 'bark');
 const brisius = new Dog('Brisius', 'white', 'au');
 console.log(rexas.intro());
 console.log(brisius.intro());
+console.log(rexas.doubleSound());
+console.log(brisius.doubleSound());
 
 const pukis = new Cat('Pūkis', 'white');
 const garfildas = new Cat('Garfildas', 'ginger');
 console.log(pukis.intro());
 console.log(garfildas.intro());
+console.log(pukis.doubleSound());
+console.log(garfildas.doubleSound());
 
 const steve = new Hamster('Steve', 'white');
 const spirgis = new Hamster('Spirgis', 'white-black');
@@ -37,12 +44,15 @@ const zakas = new Parrot('Zakas', 'green');
 console.log(zakas.intro());
 console.log(zakas.fly());
 console.log(zakas.stopFly());
-console.log(zakas.repeatSound('cik cirik'));
+// console.log(zakas.repeatSound());
+console.log(zakas.doubleSound());
+
 
 const cika = new Canary('Cika', 'yellow');
 console.log(cika.intro());
 console.log(cika.fly());
 console.log(cika.stopFly());
+console.log(cika.doubleSound());
 
 const baltasis = new Stark('Baltasis', 'white');
 console.log(baltasis.intro());
@@ -50,6 +60,7 @@ console.log(baltasis.fly());
 console.log(baltasis.stopFly());
 console.log(baltasis.bringBabies(1));
 console.log(baltasis.bringBabies(2));
+console.log(baltasis.doubleSound());
 
 
 
@@ -60,6 +71,7 @@ console.log(babyShark.intro());
 console.log(babyShark.swim());
 console.log(babyShark.stopSwim());
 console.log(babyShark.eatHuman());
+console.log(babyShark.doubleSound());
 
 const karosiukas = new Goldfish('Karosiukas', 'orange', 3);
 console.log(karosiukas.intro());
@@ -69,6 +81,7 @@ console.log(karosiukas.makeWish('Noriu namo'));
 console.log(karosiukas.makeWish('Noriu pinigu'));
 console.log(karosiukas.makeWish('Noriu atsidurti saloje'));
 console.log(karosiukas.makeWish('Noriu atostogu!'));
+console.log(karosiukas.doubleSound());
 
 
 const orkas = new Dolphin('Orkas', 'blue');
@@ -77,3 +90,4 @@ console.log(orkas.swim());
 console.log(orkas.stopSwim());
 console.log(orkas.jumpFromWater(1));
 console.log(orkas.jumpFromWater(1));
+console.log(orkas.doubleSound());
