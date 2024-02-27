@@ -575,15 +575,66 @@ console.log(sumWithInitial);
 
 
 function multipleOfIndex(array) {
-    let i = 1;
-    let i_of_array = len(array);
-    res_array = [];
-    for i in range(1, i_of_array):
-        if array[i] % i == 0:
-            res_array.extend([array[i]]);
-    return res_array;
+    let result = [];
+    for (let i = 0; i <= array.length; i++) {
+        if (array[i] % i === 0 || array[i] === 0) {
+            result.push(array[i]);
+        }
+    }
+    return result;
 }
 
 console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]), [-6, 32, 25]);
 console.log(multipleOfIndex([68, -1, 1, -7, 10, 10]), [-1, 10]);
 console.log(multipleOfIndex([11, -11]), [-11]);
+console.log(multipleOfIndex([0, 2, 3, 6, 9]), [+0, 2, 6]);
+
+// function multipleOfIndex(array) {
+//     return array.filter((x, i) => x == 0 || x % i === 0)
+// }
+
+
+function grabDoll(dolls) {
+    let bag = [];
+    for (let i = 0; i < dolls.length; i++) {
+        if (dolls[i] === !'Hello Kitty') continue;
+        if (dolls[i] === !'Barbie doll') continue;
+        if ((dolls[i] == 'Hello Kitty' || dolls[i] == 'Barbie doll') && bag.length < 3) {
+            bag.push(dolls[i]);
+        } else if (bag.length === 3) {
+            break;
+        }
+    }
+    return bag;
+}
+
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Snow white"]), ["Hello Kitty"]);
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"]), ["Hello Kitty", "Hello Kitty"]);
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Barbie doll", "Snow white"]), ["Hello Kitty", "Hello Kitty", "Barbie doll"]);
+console.log(grabDoll(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty", "Hello Kitty", "Snow white"]), ["Barbie doll", "Hello Kitty", "Hello Kitty"]);
+
+// function grabDoll(dolls) {
+//     var bag = [];
+
+//     for (var i = 0; i < dolls.length; i++) {
+
+//         if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll")
+//             bag.push(dolls[i]);
+//         else
+//             continue;
+
+//         if (bag.length === 3) break;
+//     }
+
+//     return bag;
+// }
+
+// function grabDoll(dolls) {
+//     var bag = [], doll;
+//     for (doll of dolls) {
+//         if (doll == "Hello Kitty" || doll == "Barbie doll") bag.push(doll)
+//         else continue
+//         if (bag.length > 2) break
+//     }
+//     return bag;
+// }

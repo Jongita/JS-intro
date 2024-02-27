@@ -1290,3 +1290,124 @@ console.log(reverseWords("row row row your boat"), "boat your row row row");
 console.log(reverseWords(""), "");
 
 console.log('---------------------------');
+
+console.log('Noriu atostogu'.split());
+console.log('Noriu atostogu'.split().length);
+
+console.log('---------------------------');
+
+function addLength(str) {
+    return str.split(' ').map(w => `${w} ${w.length}`);
+
+}
+
+console.log(addLength('you will win'), ["you 3", "will 4", "win 3"]);
+
+
+// function addLength(str) {
+//     var split = str.split(" ");
+//     var result = [];
+
+//     for (i = 0; i < split.length; ++i) {
+//         result.push(split[i] + " " + split[i].length);
+//     }
+//     return result;
+// }
+
+function findDifference(a, b) {
+    let sumA = 1;
+    let sumB = 1;
+    for (let i = 0; i < a.length; i++) {
+        sumA *= a[i];
+        sumB *= b[i];
+    }
+    return Math.abs(sumA - sumB);
+}
+
+console.log(findDifference([3, 2, 5], [1, 4, 4]), 14);
+console.log(findDifference([9, 7, 2], [5, 2, 2]), 106);
+console.log(findDifference([11, 2, 5], [1, 10, 8]), 30);
+console.log(findDifference([4, 4, 7], [3, 9, 3]), 31);
+console.log(findDifference([15, 20, 25], [10, 30, 25]), 0);
+
+function find_difference(a, b) {
+    return Math.abs(a.reduce((previous, current) => previous * current) - b.reduce((previous, current) => previous * current));
+}
+
+const array1 = [1, 2, 3, 4, 5];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
+function multipleOfIndex(array) {
+    let result = [];
+    for (let i = 0; i <= array.length; i++) {
+        if (array[i] % i === 0 || array[i] === 0) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]), [-6, 32, 25]);
+console.log(multipleOfIndex([68, -1, 1, -7, 10, 10]), [-1, 10]);
+console.log(multipleOfIndex([11, -11]), [-11]);
+console.log(multipleOfIndex([0, 2, 3, 6, 9]), [+0, 2, 6]);
+
+// function multipleOfIndex(array) {
+//     return array.filter((x, i) => x == 0 || x % i === 0)
+// }
+
+
+function grabDoll(dolls) {
+    let bag = [];
+    for (let i = 0; i < dolls.length; i++) {
+        if (dolls[i] === !'Hello Kitty') continue;
+        if (dolls[i] === !'Barbie doll') continue;
+        if ((dolls[i] == 'Hello Kitty' || dolls[i] == 'Barbie doll') && bag.length < 3) {
+            bag.push(dolls[i]);
+        } else if (bag.length === 3) {
+            break;
+        }
+    }
+    return bag;
+}
+
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Snow white"]), ["Hello Kitty"]);
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"]), ["Hello Kitty", "Hello Kitty"]);
+console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Barbie doll", "Snow white"]), ["Hello Kitty", "Hello Kitty", "Barbie doll"]);
+console.log(grabDoll(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty", "Hello Kitty", "Snow white"]), ["Barbie doll", "Hello Kitty", "Hello Kitty"]);
+
+// function grabDoll(dolls) {
+//     var bag = [];
+
+//     for (var i = 0; i < dolls.length; i++) {
+
+//         if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll")
+//             bag.push(dolls[i]);
+//         else
+//             continue;
+
+//         if (bag.length === 3) break;
+//     }
+
+//     return bag;
+// }
+
+// function grabDoll(dolls) {
+//     var bag = [], doll;
+//     for (doll of dolls) {
+//         if (doll == "Hello Kitty" || doll == "Barbie doll") bag.push(doll)
+//         else continue
+//         if (bag.length > 2) break
+//     }
+//     return bag;
+// }
