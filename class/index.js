@@ -17,7 +17,7 @@ import Goldfish from "./Goldfish.js";
 import Dolphin from "./Dolphin.js";
 
 const rexas = new Dog('Rexas', 'brown', 'bark');
-const brisius = new Dog('Brisius', 'white', 'au');
+const brisius = new Dog('Brisius', 'white', 'wuf');
 console.log(rexas.intro());
 console.log(brisius.intro());
 console.log(rexas.doubleSound());
@@ -36,7 +36,7 @@ console.log(steve.intro());
 console.log(spirgis.intro());
 steve.eat(2);
 console.log(steve.eat(2));
-
+console.log(steve.doubleSound());
 
 console.log('-----------------------------------------');
 
@@ -44,9 +44,12 @@ const zakas = new Parrot('Zakas', 'green');
 console.log(zakas.intro());
 console.log(zakas.fly());
 console.log(zakas.stopFly());
-// console.log(zakas.repeatSound());
+console.log(zakas.repeatSound());
 console.log(zakas.doubleSound());
-
+console.log(zakas.repeatHistory('Labas'));
+console.log(zakas.repeatHistory('Ka veiki?'));
+console.log(zakas.repeatHistory('Labanaktis'));
+console.log(zakas.repeatHistory('Ka sakei?'));
 
 const cika = new Canary('Cika', 'yellow');
 console.log(cika.intro());

@@ -1256,3 +1256,37 @@ console.log(tripleTrouble("Sea", "urn", "pms"), "Supermans");
 console.log(tripleTrouble("LLh", "euo", "xtr"), "LexLuthor");
 
 
+console.log('---------------------------');
+
+function addLength(str) {
+    return str.split(' ').map(w => `${w} ${w.length}`);
+
+}
+
+console.log(addLength('you will win'), ["you 3", "will 4", "win 3"]);
+
+
+// function addLength(str) {
+//     var split = str.split(" ");
+//     var result = [];
+
+//     for (i = 0; i < split.length; ++i) {
+//         result.push(split[i] + " " + split[i].length);
+//     }
+//     return result;
+// }
+console.log('---------------------------');
+
+function reverseWords(str) {
+
+    return str.split(' ').reverse().join(' ')
+};
+
+console.log(reverseWords("hello world!"), "world! hello");
+console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda");
+console.log(reverseWords("foobar"), "foobar");
+console.log(reverseWords("kata editor"), "editor kata");
+console.log(reverseWords("row row row your boat"), "boat your row row row");
+console.log(reverseWords(""), "");
+
+console.log('---------------------------');

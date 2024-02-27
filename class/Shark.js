@@ -16,3 +16,13 @@ class Shark extends Fish {
 }
 
 export default Shark;
+
+// / - Fish(name, color), intro(), swim(), stopSwim():
+// - Shark(name, color), intro(), swim(), stopSwim(), eatHuman()
+//     - eatHuman() Kaip noreciau paragauti plaukmenu...
+// Goldfish(name, color, wishLimit ?), intro(), swim(), stopSwim(), makeWish()
+//     - wishLimit(default: 3)
+//     - makeWish({{ myWish }})
+//     - jeigu liko neispildytu noru: Stai tavo noras: { { myWish } }
+// - jeigu neliko neispildytu noru: Daugiau noru ispildyti nebegaliu: (
+//     - jeigu is viso nepildo noru: As nepildau noru / Wrong fish 👀

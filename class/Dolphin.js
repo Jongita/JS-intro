@@ -4,7 +4,7 @@ class Dolphin extends Fish {
     constructor(name, color) {
         super(name, color);
         this.breed = 'Dolphin';
-        this.sound = 'Kvi Kvi';
+        this.sound = 'kvi kvi';
         this.emoji = '🐬🐬';
         this.jumpCount = 0;
         this.soundRepeatCount = 5;

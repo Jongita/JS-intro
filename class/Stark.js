@@ -4,7 +4,7 @@ class Stark extends Bird {
     constructor(name, color) {
         super(name, color);
         this.breed = 'Stark';
-        this.sound = 'Trr Trr Trr';
+        this.sound = 'trr trr trr';
         this.emoji = '🦅🦅';
         this.isBringingBabies = true;
         this.babiesCount = 0;
@@ -24,6 +24,12 @@ export default Stark;
 
 
 
-// - Stark(name, color), intro(), fly(), stopFly(), bringBabies()
-//     - babiesCount
-//     - bringBabies(): Zmones i kopustu lauka atnesiau dar viena vaika({{ babiesCount }})
+// / - Bird(name, color), intro(), fly(), stopFly():
+// // - Parrot(name, color), intro(), fly(), stopFly(), repeatSound(), repeatHistory()
+//     - history
+//     - repeatSound({{ sound }})
+//     - repeatHistory() isspausdina paskutinius 3 jam pasakytus tekstus
+//         - Canary(name, color), intro(), fly(), stopFly()
+//         - Stark(name, color), intro(), fly(), stopFly(), bringBabies()
+//         - babiesCount
+//         - bringBabies(): Zmones i kopustu lauka atnesiau dar viena vaika({{ babiesCount }})

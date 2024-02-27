@@ -505,21 +505,85 @@ console.log(magNumber(["M4A1", 4]), 1);
 // PSG1 - 5 bullets
 
 function reverseWords(str) {
-    let result = '';
-    for (let i = str.length; i >= 0; i--) {
-        result += str[i];
-    }
-    return result;
+
+    return str.split(' ').reverse().join(' ')
 };
 
 console.log(reverseWords("hello world!"), "world! hello");
-console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda");
-console.log(reverseWords("foobar"), "foobar");
-console.log(reverseWords("kata editor"), "editor kata");
-console.log(reverseWords("row row row your boat"), "boat your row row row");
-console.log(reverseWords(""), "");
+// console.log(reverseWords("yoda doesn't speak like this"), "this like speak doesn't yoda");
+// console.log(reverseWords("foobar"), "foobar");
+// console.log(reverseWords("kata editor"), "editor kata");
+// console.log(reverseWords("row row row your boat"), "boat your row row row");
+// console.log(reverseWords(""), "");
 
 console.log('----------------');
 
 console.log('Noriu atostogu'.split());
 console.log('Noriu atostogu'.split().length);
+
+console.log('---------------------------');
+
+function addLength(str) {
+    return str.split(' ').map(w => `${w} ${w.length}`);
+
+}
+
+console.log(addLength('you will win'), ["you 3", "will 4", "win 3"]);
+
+
+// function addLength(str) {
+//     var split = str.split(" ");
+//     var result = [];
+
+//     for (i = 0; i < split.length; ++i) {
+//         result.push(split[i] + " " + split[i].length);
+//     }
+//     return result;
+// }
+
+function findDifference(a, b) {
+    let sumA = 1;
+    let sumB = 1;
+    for (let i = 0; i < a.length; i++) {
+        sumA *= a[i];
+        sumB *= b[i];
+    }
+    return Math.abs(sumA - sumB);
+}
+
+console.log(findDifference([3, 2, 5], [1, 4, 4]), 14);
+console.log(findDifference([9, 7, 2], [5, 2, 2]), 106);
+console.log(findDifference([11, 2, 5], [1, 10, 8]), 30);
+console.log(findDifference([4, 4, 7], [3, 9, 3]), 31);
+console.log(findDifference([15, 20, 25], [10, 30, 25]), 0);
+
+function find_difference(a, b) {
+    return Math.abs(a.reduce((previous, current) => previous * current) - b.reduce((previous, current) => previous * current));
+}
+
+const array1 = [1, 2, 3, 4, 5];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
+function multipleOfIndex(array) {
+    let i = 1;
+    let i_of_array = len(array);
+    res_array = [];
+    for i in range(1, i_of_array):
+        if array[i] % i == 0:
+            res_array.extend([array[i]]);
+    return res_array;
+}
+
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]), [-6, 32, 25]);
+console.log(multipleOfIndex([68, -1, 1, -7, 10, 10]), [-1, 10]);
+console.log(multipleOfIndex([11, -11]), [-11]);

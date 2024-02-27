@@ -17,16 +17,6 @@ class Animal {
         }
         return text.join(' ') + '.';
     }
-    //     if (this.breed === 'Parrot' || 'Canary' || 'Stark') {
-    //         return `${this.name}: ${this.sound.repeat(3)}`;
-    //     }
-    //     if (this.breed === 'Dog' || 'Cat' || 'Hamster') {
-    //         return `${this.name}: ${this.sound.repeat(2)}`;
-    //     }
-    //     if (this.breed === 'Dolphin') {
-    //         return `${this.name}: ${this.sound.repeat(1)}`;
-    //     }
-    // }
 }
 
 export default Animal;

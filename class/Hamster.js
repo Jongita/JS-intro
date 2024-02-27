@@ -17,3 +17,11 @@ class Hamster extends Pet {
 }
 export default Hamster;
 
+// Animal(name, color), intro():
+// - Pet(name, color), intro():
+// - Dog(name, color, sound), intro()
+//     - sound -> Double sound
+//         - Cat(name, color), intro()
+//         - Hamster(name, color), intro(), eat()
+//         - foodAmount
+//         - eat(): Mano burnoje siuo metu yra { { foodAmout++ } } morku

@@ -4,8 +4,10 @@ class Parrot extends Bird {
     constructor(name, color) {
         super(name, color);
         this.breed = 'Parrot';
-        this.sound = 'Ka Ka';
+        this.sound = 'ka ka';
         this.emoji = '🦜🦜';
+        this.history = 3;
+        this.repeatedText = 0;
     }
 
     repeatSound(sound) {
@@ -13,8 +15,17 @@ class Parrot extends Bird {
         const repeatedSound = str[0].toUpperCase() + str.slice(1);
         return `${this.name}: ${repeatedSound}`;
     }
-
+    repeatHistory(text) {
+        this.repeatedText += text.split().length;
+        if (this.repeatedText <= this.history) {
+            return `${this.name}: ${text}`;
+        } else {
+            return `${this.name}: Daugiau neatsimenu 😒`;
+        }
+    }
 }
+
+
 
 export default Parrot;
 
