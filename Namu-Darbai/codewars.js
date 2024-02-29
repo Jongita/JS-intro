@@ -1411,3 +1411,388 @@ console.log(grabDoll(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty
 //     }
 //     return bag;
 // }
+
+console.log('-------------------------------');
+
+function contamination(text, char) {
+
+    return text.split('').map(letter => char).join('');
+}
+
+console.log(contamination("abc", "z"), "zzz")
+console.log(contamination("", "z"), "")
+console.log(contamination("abc", ""), "")
+console.log(contamination("_3ebzgh4", "&"), "&&&&&&&&")
+console.log(contamination("//case", " "), "      ")
+
+function contamination(text, char) {
+    return char.repeat(text.length)
+}
+
+function position(letter) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+        "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+        "w", "x", "y", "z"];
+    let result = [];
+    for (let i = 0; i < alphabet.length; i++) {
+        if (alphabet[i] === letter) {
+            return `Position of alphabet: ${i + 1}`;
+        }
+    }
+
+}
+console.log(position("a"), "Position of alphabet: 1");
+console.log(position("z"), "Position of alphabet: 26");
+console.log(position("e"), "Position of alphabet: 5");
+
+
+// function position(letter) {
+//     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//     return 'Position of alphabet: ' + (alphabet.indexOf(letter) + 1);
+// }
+console.log('-------------------------------');
+
+function greet(name) {
+    if (name === "Johnny") {
+        return `Hello, my love!`;
+    }
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Jim"), "Hello, Jim!");
+console.log(greet("Jane"), "Hello, Jane!");
+console.log(greet("Simon"), "Hello, Simon!");
+console.log(greet("Johnny"), "Hello, my love!");
+
+// function greet(name) {
+//     return "Hello, " + (name == "Johnny" ? "my love" : name) + "!";
+// }
+console.log('-------------------------------');
+
+const haystack_1 = ['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false];
+const haystack_2 = ['283497238987234', 'a dog', 'a cat', 'some random junk', 'a piece of hay', 'needle', 'something somebody lost a while ago'];
+const haystack_3 = [1, 2, 3, 4, 5, 6, 7, 8, 8, 7, 5, 4, 3, 4, 5, 6, 67, 5, 5, 3, 3, 4, 2, 34, 234, 23, 4, 234, 324, 324, 'needle', 1, 2, 3, 4, 5, 5, 6, 5, 4, 32, 3, 45, 54];
+
+
+function findNeedle(haystack) {
+    if (haystack.includes('needle')) {
+        return `found the needle at position ${haystack.indexOf('needle')}`;
+    }
+    return "Your function didn't return anything";
+}
+
+
+console.log(findNeedle(haystack_1), undefined, "Your function didn't return anything");
+console.log(findNeedle(haystack_1), 'found the needle at position 3')
+console.log(findNeedle(haystack_2), 'found the needle at position 5')
+console.log(findNeedle(haystack_3), 'found the needle at position 30')
+
+console.log('-------------------------------');
+
+const solution = (a, b) => a.length > b.length ? b + a + b : a + b + a;
+
+console.log(solution('45', '1'), '1451');
+console.log(solution('13', '200'), '1320013');
+console.log(solution('Soon', 'Me'), 'MeSoonMe');
+console.log(solution('U', 'False'), 'UFalseU');
+
+console.log('-------------------------------');
+
+function validateHello(greetings) {
+    const greetings1 = greetings.toLowerCase();
+
+    if (greetings1.includes('hello')) {
+        return true;
+    }
+    if (greetings1.includes('ciao')) {
+        return true;
+    }
+    if (greetings1.includes('salut')) {
+        return true;
+    }
+    if (greetings1.includes('hallo')) {
+        return true;
+    }
+    if (greetings1.includes('hola')) {
+        return true;
+    }
+    if (greetings1.includes('ahoj')) {
+        return true;
+    }
+    if (greetings1.includes('czesc')) {
+        return true;
+    }
+    return false;
+}
+
+console.log(validateHello('ahoj'), true);
+console.log(validateHello('meh'), false);
+
+console.log('-------------------------------');
+
+function quadrant(x, y) {
+    if (x > 0 && y > 0) {
+        return 1;
+    }
+    if (x < 0 && y > 0) {
+        return 2;
+    }
+    if (x < 0 && y < 0) {
+        return 3;
+    }
+    if (x > 0 && y < 0) {
+        return 4;
+    }
+}
+
+console.log(quadrant(1, 2), 1);
+
+console.log('-------------------------------');
+
+function integrate(coefficient, exponent) {
+    return `${coefficient / (exponent + 1)}x^${exponent + 1}`;
+}
+
+console.log(integrate(3, 2), "1x^3");
+console.log(integrate(12, 5), "2x^6");
+console.log(integrate(20, 1), "10x^2")
+console.log(integrate(40, 3), "10x^4")
+console.log(integrate(90, 2), "30x^3")
+
+console.log('-------------------------------');
+function derive(coefficient, exponent) {
+    return `${coefficient * exponent}x^${exponent - 1}`;
+}
+
+console.log(derive(7, 8), "56x^7");
+console.log(derive(5, 9), "45x^8");
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+console.log(goals(0, 0, 0), 0)
+console.log(goals(43, 10, 5), 58)
+
+
+function mystery() {
+    var results =
+        { sanity: 'Hello' };
+    return results;
+}
+
+console.log(mystery(), { sanity: 'Hello' }, 'Mystery has not returned to sanity');
+
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
+console.log(name);
+
+
+function buildString(...template) {
+    return `I like ${template.join(', ')}!`;
+}
+
+
+console.log(buildString('Cheese', 'Milk', 'Chocolate'), 'I like Cheese, Milk, Chocolate!', 'Return the correct String');
+console.log(buildString('Cheese', 'Milk'), 'I like Cheese, Milk!', 'Return the correct String');
+console.log(buildString('Chocolate'), 'I like Chocolate!', 'Return the correct String');
+
+
+
+function square(n) {
+    return n ** 2;
+}
+
+console.log(square(3), 9);
+
+function evalObject(value) {
+    var result = 0;
+    switch (value.operation) {
+        case '+': return value.a + value.b;
+        case '-': return value.a - value.b;
+        case '/': return value.a / value.b;
+        case '*': return value.a * value.b;
+        case '%': return value.a % value.b;
+        case '^': return Math.pow(value.a, value.b);
+    }
+    return result;
+}
+
+
+
+console.log(evalObject({ a: 1, b: 1, operation: '+' }), 2, 'Return the evaluated string as a number!');
+console.log(evalObject({ a: 1, b: 1, operation: '-' }), 0, 'Return the evaluated string as a number!');
+console.log(evalObject({ a: 1, b: 1, operation: '/' }), 1, 'Return the evaluated string as a number!');
+console.log(evalObject({ a: 1, b: 1, operation: '*' }), 1, 'Return the evaluated string as a number!');
+console.log(evalObject({ a: 1, b: 1, operation: '%' }), 0, 'Return the evaluated string as a number!');
+console.log(evalObject({ a: 1, b: 1, operation: '^' }), 1, 'Return the evaluated string as a number!');
+
+
+function seatsInTheater(nCols, nRows, col, row) {
+
+    const totalSeats = nCols * nRows;
+    const newColNum = nCols - col + 1;
+    const newRowNum = nRows - row;
+    const peopleBehind = newColNum * newRowNum;
+
+    return peopleBehind;
+
+}
+
+console.log(seatsInTheater(16, 11, 5, 3), 96)
+
+console.log(seatsInTheater(1, 1, 1, 1), 0)
+
+console.log(seatsInTheater(13, 6, 8, 3), 18)
+
+console.log(seatsInTheater(60, 100, 60, 1), 99)
+
+console.log(seatsInTheater(1000, 1000, 1000, 1000), 0)
+
+console.log('---------------------------------------');
+
+function getLength(arr) {
+    return arr.length;
+}
+function getFirst(arr) {
+    return arr[0];
+}
+function getLast(arr) {
+    return arr[arr.length - 1];
+}
+function pushElement(arr) {
+    var el = 1;
+    const a = arr.push(el);
+    return arr;
+}
+function popElement(arr) {
+    const b = arr.pop();
+    return arr;
+}
+
+console.log(getLength([1, 2, 3]), 3);
+console.log(getFirst([1, 2, 3]), 1);
+console.log(getLast([1, 2, 3]), 3);
+console.log(pushElement([1, 2, 3]), 4);
+console.log(popElement([1, 2, 3]), 2);
+
+console.log('---------------------------------------');
+
+function convertToCelsius(temp) {
+    var celsius = (temp - 32) * (5 / 9);
+    return celsius;
+}
+
+function weatherInfo(temp) {
+    var c = convertToCelsius(temp);
+    if (c > 0)
+        return (c + " is above freezing temperature")
+    else
+        return (c + " is freezing temperature")
+}
+
+
+console.log(weatherInfo(50), '10 is above freezing temperature')
+console.log(weatherInfo(23), '-5 is freezing temperature')
+
+
+function myFirstKata(a, b) {
+    if (typeof (a) !== "number" || typeof (b) !== "number") {
+        return false;
+    } else {
+        return a % b + b % a;
+    }
+}
+
+console.log('---------------------------------------------');
+
+function greet(language) {
+    var names;
+    switch (language) {
+        case 'english': names = 'Welcome'; break;
+        case 'czech': names = 'Vitejte'; break;
+        case 'danish': names = 'Velkomst'; break;
+        case 'dutch': names = 'Welkom'; break;
+        case 'estonian': names = 'Tere tulemast'; break;
+        case 'finnish': names = 'Tervetuloa'; break;
+        case 'flemish': names = 'Welgekomen'; break;
+        case 'french': names = 'Bienvenue'; break;
+        case 'german': names = 'Willkommen'; break;
+        case 'irish': names = 'Failte'; break;
+        case 'italian': names = 'Benvenuto'; break;
+        case 'latvian': names = 'Gaidits'; break;
+        case 'lithuanian': names = 'Laukiamas'; break;
+        case 'polish': names = 'Witamy'; break;
+        case 'spanish': names = 'Bienvenido'; break;
+        case 'swedish': names = 'Valkommen'; break;
+        case 'welsh': names = 'Croeso'; break;
+        default: names = 'Welcome';
+    }
+    return names;
+}
+
+
+console.log(greet('english'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
+console.log(greet('dutch'), 'Welkom', "Your function should have returned 'Welkom'. Try again.");
+console.log(greet('polish'), 'Welkom', "Your function should have returned 'Welkom'. Try again.");
+console.log(greet('IP_ADDRESS_INVALID'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
+
+
+// function greet(lang) {
+//     return langs[lang] || langs['english'];
+// }
+
+// var langs = {
+//     'english': 'Welcome',
+//     'czech': 'Vitejte',
+//     'danish': 'Velkomst',
+//     'dutch': 'Welkom',
+//     'estonian': 'Tere tulemast',
+//     'finnish': 'Tervetuloa',
+//     'flemish': 'Welgekomen',
+//     'french': 'Bienvenue',
+//     'german': 'Willkommen',
+//     'irish': 'Failte',
+//     'italian': 'Benvenuto',
+//     'latvian': 'Gaidits',
+//     'lithuanian': 'Laukiamas',
+//     'polish': 'Witamy',
+//     'spanish': 'Bienvenido',
+//     'swedish': 'Valkommen',
+//     'welsh': 'Croeso'
+// }
+
+function quadratic(x1, x2) {
+    return [1, 0, 0];
+}
+
+console.log(quadratic(0, 1), [1, -1, 0]);
+console.log(quadratic(1, 1), [1, -2, 1]);
+console.log(quadratic(-4, -9), [1, 13, 36]);
+console.log(quadratic(-5, -4), [1, 9, 20]);
+console.log(quadratic(4, -9), [1, 5, -36]);
+console.log(quadratic(5, -4), [1, -1, -20]);
+
+function sc(floor) {
+    if (floor <= 1) {
+        return '';
+    } else if (floor < 7) {
+        return 'Aa~ '.repeat(floor - 1) + 'Pa! ' + 'Aa!';
+    } else {
+        return 'Aa~ '.repeat(floor - 1) + 'Pa!';
+    }
+}
+
+console.log(sc(2), "Aa~ Pa! Aa!", "good luck!");
+console.log(sc(6), "Aa~ Aa~ Aa~ Aa~ Aa~ Pa! Aa!", "good luck!");
+console.log(sc(7), "Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Pa!", "good luck!");
+console.log(sc(10), "Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Aa~ Pa!", "good luck!");
+console.log(sc(1), "", "good luck!");
+console.log(sc(-1), "", "good luck!");
+
+// function sc(floor) {
+//     if (floor <= 1) return "";
+
+//     return 'Aa~ '.repeat(floor - 1) + 'Pa!' + (floor <= 6 ? ' Aa!' : '');
+// }
