@@ -1796,3 +1796,327 @@ console.log(sc(-1), "", "good luck!");
 
 //     return 'Aa~ '.repeat(floor - 1) + 'Pa!' + (floor <= 6 ? ' Aa!' : '');
 // }
+
+function bingo(a) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+        "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
+        "w", "x", "y", "z"];
+    const bingoLetters = [2, 9, 14, 7, 15];
+    if (a.includes(2) && a.includes(9) && a.includes(14) && a.includes(7) && a.includes(15)) {
+        return 'WIN';
+    }
+    return 'LOSE';
+}
+console.log(bingo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), "LOSE");
+console.log(bingo([21, 13, 2, 7, 5, 14, 7, 15, 9, 10]), "WIN");
+
+
+// const bingo = ar => [2, 7, 9, 14, 15].every(e => ar.includes(e)) ? 'WIN' : 'LOSE';
+
+
+// function bingo(a) {
+//     let n = [2, 9, 14, 7, 15]
+//     for (let i = 0; i < n.length; i++) {
+//         if (!a.includes(n[i])) { return 'LOSE' }
+//     }
+//     return 'WIN'
+// }
+
+function saleHotdogs(n) {
+    if (n < 5) {
+        return n * 100;
+    }
+    if (n >= 5 && n < 10) {
+        return n * 95;
+    } else {
+        return n * 90;
+    }
+}
+
+console.log(saleHotdogs(1), 100);
+console.log(saleHotdogs(4), 400);
+console.log(saleHotdogs(5), 475);
+console.log(saleHotdogs(9), 855);
+console.log(saleHotdogs(10), 900);
+console.log(saleHotdogs(100), 9000);
+
+// function saleHotdogs(n) {
+//     return n * (n < 5 ? 100 : n < 10 ? 95 : 90);
+// }
+
+function howManydays(month) {
+    var days;
+    switch (month) {
+        case 1: days = 31; break;
+        case 2: days = 28; break;
+        case 3: days = 31; break;
+        case 4: days = 30; break;
+        case 5: days = 31; break;
+        case 6: days = 30; break;
+        case 7: days = 31; break;
+        case 8: days = 30; break;
+        case 9: days = 31; break;
+        case 10: days = 30; break;
+        case 11: days = 31; break;
+        case 12: days = 31; break;
+
+    }
+    return days;
+}
+
+console.log(howManydays(1), 31);
+console.log(howManydays(2), 28);
+console.log(howManydays(3), 31);
+console.log(howManydays(4), 30);
+console.log(howManydays(12), 31);
+
+// function howManydays(month) {
+//     switch (month) {
+//         case 2: return 28
+//         case 4:
+//         case 6:
+//         case 9:
+//         case 11: return 30
+//     }
+//     return 31
+// }
+
+function firstToLast(str, c) {
+    return str.includes(c) ? str.lastIndexOf(c) - str.indexOf(c) : -1;
+}
+
+console.log(firstToLast('ababc', 'a'), 2);
+console.log(firstToLast('ababc', 'c'), 0);
+console.log(firstToLast('ababc', 'd'), -1);
+console.log(firstToLast('zcbtjwnziaoqqsuzvuanbwoseaqfjqspeglbih', 's'), 17);
+
+console.log('---------------------------------------------------');
+
+// function testit(act, s) {
+//     const ss = s.split('');
+//     let result = [];
+//     for (let i = 0; i < s.length; i++) {
+//         if (act[i] === 'run' && ss[i] === '_') {
+//             result.push('_')
+//         }
+//         if (act[i] === 'run' && ss[i] === '|') {
+//             result.push('/')
+//         }
+//         if (act[i] === 'jump' && ss[i] === '_') {
+//             result.push('x')
+//         }
+//         if (act[i] === 'jump' && ss[i] === '|') {
+//             result.push('|')
+//         }
+//     }
+//     return result.join('');
+// }
+
+// function testit(act, s) {
+//     const newAct = [act[0] + act[1], act[2] + act[3], act[4]];
+//     const newAct1 = newAct.map(item => item === 'runjump' ? '_|' : item === 'runrun' ? '_/' : item === 'jumpjump' ? 'x|' : item === 'jumprun' ? 'x/' : item === 'run' ? '_' : item === 'jump' ? 'x' : 0);
+
+
+//     return newAct1.join('');
+// }
+
+
+console.log(testit(["run", "jump", "run", "jump", "run"], "_|_|_"), "_|_|_", "")
+console.log(testit(["run", "jump", "run", "run", "run"], "_|_|_"), "_|_/_", "")
+console.log(testit(["run", "run", "run", "run", "run"], "_|_|_"), "_/_/_", "")
+console.log(testit(["jump", "jump", "jump", "jump", "jump"], "_|_|_"), "x|x|x", "")
+console.log(testit(["jump", "run", "jump", "run", "jump"], "_|_|_"), "x/x/x", "")
+// console.log(testit(["run", "jump", "run", "jump", "jump", "run", "run", "run", "run"], ""), "_|/||_///")
+// console.log(testit(["jump", "jump", "run", "jump", "jump", "jump", "jump", "run", "jump", "jump", "jump", "run", "run", "run", "jump", "jump", "run", "jump", "run", "run", "jump", "jump", "run", "jump", "run"], ""), "xx/|xx|_x|x_/_xx/x_/|x_|/")
+
+
+// "run _
+// "run", "jump" _|
+//     "run", "run" _ /
+//     jump", "jump" x|
+//     jump", "run x /
+//     "jump" x
+
+
+// const firstSecond = act[0] + act[1];
+// const thirdFourth = act[2] + act[3];
+// const last = act[4];
+
+
+function testit(act, s) {
+    let arr = [...s];
+    console.log(arr);
+    act = act.map(el => el === 'run' ? '_' : '|');
+    arr = arr.map((el, i) => el === act[i] ? el :
+        el === '|' && act[i] === '_' ? '/' : 'x'
+    )
+    return arr.join('')
+}
+console.log(testit(["run", "jump", "run", "jump", "run"], "_|_|_"), "_|_|_", "")
+console.log(testit(["run", "jump", "run", "run", "run"], "_|_|_"), "_|_/_", "")
+console.log(testit(["run", "run", "run", "run", "run"], "_|_|_"), "_/_/_", "")
+console.log(testit(["jump", "jump", "jump", "jump", "jump"], "_|_|_"), "x|x|x", "")
+console.log(testit(["jump", "run", "jump", "run", "jump"], "_|_|_"), "x/x/x", "")
+
+function feast(beast, dish) {
+    if (beast[0][0] === dish[0][0] && beast.slice(-1) === dish.slice(-1)) {
+        return true;
+    }
+    return false;
+}
+
+
+console.log(feast("great blue heron", "garlic naan"), true)
+console.log(feast("chickadee", "chocolate cake"), true)
+console.log(feast("brown bear", "bear claw"), false)
+
+console.log('-------------------------------------------');
+
+var countSheep = function (num) {
+    let result = '';
+    for (let i = 1; i <= num; i++) {
+        result += i.toString() + ' sheep...';
+    }
+    return result;
+}
+
+console.log(countSheep(0), "");
+console.log(countSheep(1), "1 sheep...");
+console.log(countSheep(2), "1 sheep...2 sheep...");
+console.log(countSheep(3), "1 sheep...2 sheep...3 sheep...");
+
+var countSheep = function (num) {
+    let str = "";
+    for (let i = 1; i <= num; i++) {
+        str += `${i} sheep...`;
+    }
+    return str;
+}
+console.log('-------------------------------------------');
+
+function ifChuckSaysSo() {
+    let result = !true;
+    if (result !== 'true');
+    return result;
+}
+
+console.log(ifChuckSaysSo(), false);
+
+// function ifChuckSaysSo() { return !true; }
+
+console.log('-------------------------------------------');
+
+const cubeChecker = (volume, side) => volume <= 0 ? false : side <= 0 ? false : side ** 3 === volume ? true : false;
+
+
+
+console.log(cubeChecker(8, 3), false);
+console.log(cubeChecker(8, 2), true);
+console.log(cubeChecker(-8, -2), false);
+console.log(cubeChecker(0, 0), false);
+console.log(cubeChecker(1, 5), false);
+console.log(cubeChecker(125, 5), true);
+
+// var cubeChecker = function (volume, side) {
+//     return Math.pow(side, 3) === volume && side > 0;
+// };
+
+console.log('-------------------------------------------');
+
+function cookie(x) {
+    if (typeof x === 'string') {
+        return `Who ate the last cookie? It was Zach!`;
+    }
+    if (typeof x === 'number') {
+        return `Who ate the last cookie? It was Monica!`;
+    } else {
+        return `Who ate the last cookie? It was the dog!`;
+    }
+}
+
+console.log(cookie("Ryan"), "Who ate the last cookie? It was Zach!")
+console.log(cookie(26), "Who ate the last cookie? It was Monica!")
+console.log(cookie(2.3), "Who ate the last cookie? It was Monica!")
+console.log(cookie(true), "Who ate the last cookie? It was the dog!")
+
+// function cookie(x) {
+//     var t = typeof x
+//     var who = t == "string" ? 'Zach' : t == "number" ? 'Monica' : 'the dog'
+//     return `Who ate the last cookie? It was ${who}!`
+// }
+
+console.log('-------------------------------------------');
+
+function removeEveryOther(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i += 2) {
+        result.push(arr[i]);
+    }
+    return result;
+}
+
+
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']), ['Hello', 'Hello Again']);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
+console.log(removeEveryOther([['Goodbye'], { 'Great': 'Job' }]), [['Goodbye']]);
+
+
+
+// function removeEveryOther(arr) {
+//     return arr.filter(function (elem, index) {
+//         return index % 2 === 0;
+//     });
+// }
+
+
+function betterThanAverage(classPoints, yourPoints) {
+    let total = 0;
+    let i = 0;
+    for (let i = 0; i < classPoints.length; i++) {
+        total += classPoints[i];
+    }
+    return total / classPoints.length < yourPoints ? true : false
+}
+
+
+
+console.log(betterThanAverage([2, 3], 5), true);
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
+
+function digitize(n) {
+    let myArr = String(n).split("");
+    let result = [];
+
+    for (let i = myArr.length - 1; i >= 0; i--) {
+        result += myArr[i];
+    }
+    return result.split("").map(i => Number(i));
+}
+
+
+console.log(digitize(35231), [1, 3, 2, 5, 3]);
+console.log(digitize(0), [0]);
+
+console.log('------------------------------');
+
+function sumMix(x) {
+    let newX = String(x).split(',').map(i => Number(i));
+
+    let result = 0;
+    for (let i = newX.length - 1; i >= 0; i--) {
+        result += newX[i];
+    }
+    return result;
+}
+
+console.log(sumMix([9, 3, '7', '3']), 22);
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42);
+console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2, '0']), 41);
+
+// function sumMix(x) {
+//     return x.map(a => +a).reduce((a, b) => a + b);
+// }

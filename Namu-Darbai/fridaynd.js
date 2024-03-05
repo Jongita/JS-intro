@@ -145,3 +145,5 @@ function randomWord() {
 }
 
 console.log(randomWord());
+
+console.clear();
