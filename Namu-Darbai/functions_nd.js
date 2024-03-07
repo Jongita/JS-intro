@@ -90,9 +90,10 @@ console.log(evenNumber(4));
 
 console.log('---------------------11----------------------');
 
+const newText = (str, letter1, letter2) => str.replaceAll(letter1, letter2);
 
 
-// console.log(newText('lietuva', ));
+console.log(newText('helicopter', 'e', 'a'));
 
 
 console.log('---------------------12----------------------');
@@ -182,25 +183,34 @@ console.log(changeLetters('aaaaa'));
 
 console.log('---------------------18----------------------');
 
-// const currentY = 2024;
-// const currentM = 3;
-// const currentD = 8;
+const currentY = 2024;
+const currentM = 3;
+const currentD = 8;
 
 
-// const yearToAge = (num1, num2, num3)
+function yearToAge(year, month, day) {
 
+    if (year < 1900 || year > currentY) {
+        return `Ivedei netikslius metus`;
+    }
+    if (year >= 1900 && month > currentM) {
+        return currentY - year - 1;
+    }
+    if (year >= 1900 && month === currentM && day > currentD) {
+        return currentY - year;
+    }
+    if (year >= 1900 && month === currentM && day == currentD) {
+        return `Siandien tavo gimtadienis ir tau ${currentY - year} metai!`;
+    }
+    if (year >= 1900 && month === currentM && day < currentD) {
+        return currentY - year - 1;
+    }
+    if (year >= 1900 && month < currentM) {
+        return currentY - year;
+    }
+}
 
-//     if (num1 < 1900) {
-//         return `Tu jau miręs arba įvedei netikslius metus`;
-//     }
-//     if (num1 >= 1900) {
-//     } else if (currentM < num2) {
-//         console.log(num1);
-//     }
-//     return 0;
-// }
-
-// console.log(yearToAge(1977, 2, 26));
+console.log(yearToAge(2011, 11, 9));
 
 console.log('---------------------19----------------------');
 
@@ -218,7 +228,23 @@ console.log(letterCount('Pomidoras', 'o'));
 
 console.log('---------------------20----------------------');
 
-function doublewArray(array1, array2) {
+function doubleArray(array1, array2) {
+    if (!Array.isArray(array1) || !Array.isArray(array2)) {
+        return 'ERROR: irasyk masyva';
+    }
+    if (array1.length === 0 || array2.length === 0) {
+        return 'ERROR: tuscias masyvas';
+    }
+    for (const number of array1) {
+        if (typeof number !== 'number' || !isFinite(number)) {
+            return 'ERROR: masyve nurodyti tik skaicius'
+        }
+    }
+    for (const number of array2) {
+        if (typeof number !== 'number' || !isFinite(number)) {
+            return 'ERROR: masyve nurodyti tik skaicius'
+        }
+    }
     let result = [];
     for (let i = 0; i < array1.length; i++) {
         for (let j = 0; j < array2.length; j++) {
@@ -227,15 +253,25 @@ function doublewArray(array1, array2) {
             }
         }
     }
-    return result;
+    const finalResult = [];
+    for (let i = 0; i < result.length; i++) {
+        if (finalResult.indexOf(result[i]) === -1) {
+            finalResult.push(result[i]);
+        }
+    }
+    return finalResult;
 }
 
+console.log(doubleArray([2, 4, 6, 8, 10, 2, 8], [2, 14, 4, 10, 12, 8, 12, 18, 44]));
+console.log(doubleArray([-5, 78, 14, 0, 18, 5], [2, Infinity, 4, 10, 12, 8, 12, 18, 44]));
+console.log(doubleArray([2, 4, 6, 'labas', 10, 2, 8], [2, 14, 4, 10, 12, 8, 12, 18, 44]));
+console.log(doubleArray('labas', 'hello'));
+console.log(doubleArray(2154, 564888));
+console.log(doubleArray(true, false));
+console.log(doubleArray(null, [1, 2, 3, 4, 5, 6]));
+console.log(doubleArray({}));
+console.log(doubleArray());
+console.log(doubleArray(undefined));
+console.log(doubleArray([]));
 
-console.log(doublewArray([2, 4, 6, 8, 10, 2, 8], [2, 14, 4, 10, 12, 8, 12, 18, 44]));
 
-// newDoubleArray = [2, 4, 8, 10]
-
-// const finalResult = [];
-// for (let i = 0; i < resilt.length; i++) {
-//     if (result.indexOf(array[i]) === -1) {
-//         result.push(array[i]);
