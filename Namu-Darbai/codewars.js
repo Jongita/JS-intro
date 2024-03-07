@@ -466,22 +466,6 @@ console.log(solution('h'), 'h');
 //     return str.split('').reverse().join('');
 // }
 
-console.log('----------------------------');
-
-function between(a, b) {
-    let total = 0;
-    let i = 0;
-    for (let i = a; i <= b; i++) {
-        const arrayOfDigits = Array.from(i);
-        console.log(arrayOfDigits);
-    }
-    return total;
-
-
-}
-
-console.log(between(1, 4), [1, 2, 3, 4]);
-console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
 
 console.log('----Num to string---------------');
 
@@ -921,29 +905,6 @@ console.log(guessBlue(12, 18, 4, 6), 0.4);
 
 console.log('-------------------');
 
-// function digitize(n) {
-//     let myInt = n;
-
-//     // Getting the string as a parameter
-//     // and typecasting it into an integer
-//     let myFunc = num => Number(num);
-
-//     let intArr = Array.from(String(myInt), myFunc);
-
-//     // Print the result array
-//     console.log(intArr);
-//     let total = 0;
-//     for (let i = intArr.length - 1; i >= 0; i--) {
-//         total += intArr[i];
-//         console.log(total, intArr[i]);
-//     }
-//     return
-// }
-
-// console.log(digitize(35231), [1, 3, 2, 5, 3]);
-// console.log(digitize(0), [0]);
-
-console.log('-------------------');
 
 function summation(num) {
     let result1 = 0;
@@ -2120,3 +2081,15 @@ console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2, '0']), 41);
 // function sumMix(x) {
 //     return x.map(a => +a).reduce((a, b) => a + b);
 // }
+
+function between(a, b) {
+    let result = [];
+    for (let i = a; i <= b; i++) {
+        result.push(i);
+    }
+
+    return result;
+}
+
+console.log(between(1, 4), [1, 2, 3, 4]);
+console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
