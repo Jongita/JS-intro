@@ -2093,3 +2093,28 @@ function between(a, b) {
 
 console.log(between(1, 4), [1, 2, 3, 4]);
 console.log(between(-2, 2), [-2, -1, 0, 1, 2]);
+
+function xor(a, b) {
+    if (a == b) {
+        return false;
+    } else if (a || b == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+console.log(xor(false, false), false, "false xor false");
+console.log(xor(true, false), true, "true xor false");
+console.log(xor(false, true), true, "false xor true");
+console.log(xor(true, true), false, "true xor true");
+console.log(xor(true, true), true, "true xor true: 'xor' is NOT identical to 'or'");
+
+// function xor(a, b) {
+//     return a != b;
+// }
+
+// function xor(a, b) {
+//     return (a || b) && !(a && b);
+// }

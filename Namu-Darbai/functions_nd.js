@@ -85,22 +85,22 @@ console.log('---------------------10----------------------');
 
 const evenNumber = (number) => number % 2 === 0 ? true : false;
 
+// const even = (number) => number % 2 === 0;
+
 console.log(evenNumber(5));
 console.log(evenNumber(4));
 
 console.log('---------------------11----------------------');
 
-const newText = (str, letter1, letter2) => str.replaceAll(letter1, letter2);
+const newText = (str, letter1, letter2) => str.toLowerCase().replaceAll(letter1, letter2);
 
-
-console.log(newText('helicopter', 'e', 'a'));
+console.log(newText('Helicopter', 'e', 'a'));
 
 
 console.log('---------------------12----------------------');
 
 function convertToFarenheit(temp) {
-    const farenheit = temp * (9 / 5) + 32;
-    return farenheit;
+    return temp * (9 / 5) + 32;
 }
 
 console.log(convertToFarenheit(10))
@@ -134,7 +134,7 @@ function pirminis(number) {
     if (number % 2 == 0 || number % 3 == 0)
         return false;
 
-    for (var i = 5; i * i <= number; i = i + 6) {
+    for (let i = 5; i * i <= number; i = i + 6) {
         if (number % i == 0 || number % (i + 2) == 0)
             return false;
     }
@@ -174,12 +174,13 @@ function changeLetters(input) {
     let result = '';
     for (let i = 0; i < input.length; i++) {
         const nextLetter = String.fromCharCode(input.charCodeAt(i) + 1);
+
         result += nextLetter;
     }
     return result;
 }
 console.log(changeLetters('hello'));
-console.log(changeLetters('aaaaa'));
+console.log(changeLetters('aaa'));
 
 console.log('---------------------18----------------------');
 
@@ -210,7 +211,7 @@ function yearToAge(year, month, day) {
     }
 }
 
-console.log(yearToAge(2011, 11, 9));
+console.log(yearToAge(1984, 3, 8));
 
 console.log('---------------------19----------------------');
 

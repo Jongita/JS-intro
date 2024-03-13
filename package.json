@@ -38,6 +38,7 @@
     "codewars": "node --watch ./Namu-Darbai/codewars.js",
     "draft": "node --watch ./Namu-Darbai/draft.js",
     "ndobjects": "node --watch ./Namu-Darbai/ndobjects.js",
+    "objectsfriday": "node --watch ./Namu-Darbai/objectsfriday.js",
     "functionsnd": "node --watch ./Namu-Darbai/functions_nd.js",
     "index": "node --watch ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
