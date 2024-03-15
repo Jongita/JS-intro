@@ -1,3 +1,4 @@
+console.clear();
 console.log('-----------------1-------------------');
 // 1. Duomenų Objektas: Sukurkite objektą, kuris saugotų jūsų mėgstamiausios knygos pavadinimą, autorių ir leidimo metus.Išveskite kiekvieną objekto savybę naudojant for in ciklą.
 
@@ -52,6 +53,16 @@ function clone(obj) {
 }
 console.log(clone(users));
 
+// function makeCopy(obj) {
+//     const copyOfObj = {};
+//     for (let key in obj) {
+//         if (obj.hasOwnProperty(key)) {
+//             copyOfObj[key] = obj[key];
+//         }
+//     }
+//     return copyOfObj;
+// }
+
 console.log('------------------5------------------');
 // 5.Raktų ir Reikšmių Atrinkimas: Turite vartotojo objektą su įvairiomis savybėmis.Naudodami for in ciklą, sukurti du masyvus: viename saugokite objekto raktus, o kitame - reikšmes.
 
@@ -70,7 +81,7 @@ console.log('-------------------6-----------------');
 
 // 6.Masyvo Suma: Turite masyvą, kuriame yra skaičiai.Naudodami for ciklą, apskaičiuokite masyvo skaičių sumą.
 
-const numbers = [15, 22, 8, 14, 1, 55]
+const numbers = [15, 22, 88, 14, 1, 55]
 let total = 0;
 for (let i = 0; i < numbers.length; i++) {
     total += numbers[i];
@@ -119,8 +130,11 @@ console.log('-------------------10-----------------');
 const students = { a: 18, b: 22, c: 31 };
 
 for (const i in students) {
-    console.log(`${i}: ${students[i] + 1}`);
+    students[i]++;
 }
+console.log(students);
 
 
-
+// for (const i in students) {
+//     console.log(`${i}: ${students[i] + 1}`);
+// }
