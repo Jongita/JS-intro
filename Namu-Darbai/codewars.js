@@ -2118,3 +2118,71 @@ console.log(xor(true, true), true, "true xor true: 'xor' is NOT identical to 'or
 // function xor(a, b) {
 //     return (a || b) && !(a && b);
 // }
+
+function pickIt(arr) {
+    let odd = [];
+    let even = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            even.push(arr[i]);
+        }
+        if (arr[i] % 2 !== 0) {
+            odd.push(arr[i]);
+        }
+    }
+    return [odd, even];
+}
+
+console.log(pickIt([1, 2]), [[1], [2]]);
+console.log(pickIt([1, 2, 3]), [[1, 3], [2]]);
+console.log(pickIt([3, 2, 1]), [[3, 1], [2]]);
+console.log(pickIt([10, 20, 30]), [[], [10, 20, 30]]);
+console.log(pickIt([11, 21, 31]), [[11, 21, 31], []]);
+console.log(pickIt([8, 1, 5, 4, 6, 1, 1]), [[1, 5, 1, 1], [8, 4, 6]]);
+
+// function pickIt(arr) {
+
+//     let odd = []
+//     let even = []
+
+//     for (var x of arr) {
+//         ((x % 2) ? odd : even).push(x)
+//     }
+
+//     return [odd, even]
+// }
+
+console.log('--------------------');
+
+function whatNumberIsIt(n) {
+
+    let num = Number(n);
+    if (num === Infinity) {
+        return "Input number is Number.POSITIVE_INFINITY";
+    }
+    if (num === -Infinity) {
+        return "Input number is Number.NEGATIVE_INFINITY";
+    }
+    if (isNaN(num)) {
+        return "Input number is Number.NaN";
+    }
+    if (num === 1.7976931348623157e+308) {
+        return "Input number is Number.MAX_VALUE";
+    }
+    if (num === 5e-324) {
+        return "Input number is Number.MIN_VALUE";
+    }
+    if (typeof num === 'number') {
+        return `Input number is ${num}`;
+    }
+
+}
+
+
+console.log(whatNumberIsIt(1 / 0), "Input number is Number.POSITIVE_INFINITY");
+console.log(whatNumberIsIt(100), "Input number is 100");
+console.log(whatNumberIsIt(1.7976931348623157e+308), "Input number is Number.MAX_VALUE");
+console.log(whatNumberIsIt(5e-324), "Input number is Number.MIN_VALUE");
+console.log(whatNumberIsIt(-Number.MAX_VALUE * 2), "Input number is Number.NEGATIVE_INFINITY");
+console.log(whatNumberIsIt(NaN), "Input number is Number.NaN");
+console.log(whatNumberIsIt(Infinity + 1), "Input number is Number.POSITIVE_INFINITY");
